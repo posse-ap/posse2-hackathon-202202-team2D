@@ -1,10 +1,137 @@
+/* PCサイズ */
+@media screen and (min-width: 480px){
 * { 
     padding: 0;
      margin: 0;
 }
-    
+/* @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css); */
+.tiles {
+padding: 30px 0 0;
+  /* flex-wrap: wrap; */
+  margin: 1vw;
+  display: flex;
+  /* justify-content: center; */
+  /* position: relative; */
+  z-index: 150;
+
+  /* width: 1040px; */
+  /* gap: 20px; */
+  font-size: 0;
+  /* text-align: center; */
+  /* position: absolute; */
+
+}
+.tiles .tile {
+  display: inline-block;
+  width: 30vw;
+  height: 100%;
+  /* margin: 20px; */
+  text-align: left;
+  opacity: 0.99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 0 snow;
+      transition:1s all;
+
+}
+.tiles .tile:before {
+  content: "";
+  background: linear-gradient(to bottom, rgb(0,0,0,0) 0%,  #0D8037 70%);
+  width: 100%;
+  height: 70%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  /* transition-property: top, opacity; */
+  transition: 0.5s ease;
+  /* transition-duration: 0.3s; */
+}
+.tiles .tile img {
+  display: block;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition:1s all;
+}
+
+.tiles .tile img:hover {
+    /* transform:scale(1.1,1.1); */
+    /* transition:1s all; */
+}
+span{
+  color: snow;}
+.tiles .tile:hover {
+    /* transform:scale(1.1,1.1); */
+
+    box-shadow: 5px 5px 5px 5px snow, -5px -5px 5px 5px snow;
+    transition:1s all;
+}
+
+.tiles .tile .details {
+  font-size: 16px;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.tiles .tile .details span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  transition-property: top, opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.tiles .tile .details .title {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 18px;
+}
+.tiles .tile .details .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.tiles .tile:focus:before,
+.tiles .tile:focus span, .tiles .tile:hover:before,
+.tiles .tile:hover span {
+  opacity: 1;
+}
+.tiles .tile:focus:before, .tiles .tile:hover:before {
+  top: 50%;
+}
+.tiles .tile:focus span, .tiles .tile:hover span {
+  top: 0;
+}
+.tiles .tile:focus .title, .tiles .tile:hover .title {
+  transition-delay: 0.15s;
+}
+.tiles .tile:focus .info, .tiles .tile:hover .info {
+  transition-delay: 0.25s;
+}
+
+
 canvas { 
     background: black;
      display: block;
       margin: 0 auto;
+}
+
+}
+
+
+
+
+
+
+/* スマホサイズ */
+@media screen and (min-width: 480px){
+
+
 }
