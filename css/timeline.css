@@ -11,7 +11,7 @@
     width: 5px;
     height: 100%;
     content: '';
-    background: black;
+    background:  #08a542;
 }
 
 .year1 {
@@ -22,7 +22,7 @@
     margin: 0 auto;
     padding: .1em;
     text-align: center;
-    background: lightgreen;
+    background: #ff9933;
     border-radius: 4px;
     font-size: 1.2em;
 }
@@ -35,7 +35,7 @@
     margin: 0 auto;
     padding: 0.1em;
     text-align: center;
-    background: lightgreen;
+    background: #f93;
     border-radius: 4px;
     font-size: 1.2em;
 }
