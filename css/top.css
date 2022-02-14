@@ -461,7 +461,7 @@ body {
 
 
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
-
+/* 
 .passing.move .passing_bar:before {
 	-webkit-animation: passing_bar 1s ease 1s 1.5 normal forwards;
 	animation: passing_bar 1s ease 1s 1.5 normal forwards;
@@ -469,7 +469,7 @@ body {
 .passing.move .passing_txt {
 	-webkit-animation: passing_txt 1.5s ease 1s 1 normal forwards;
 	animation:passing_txt 1.5s ease 1s 1 normal forwards;  
-}
+} */
 /* .passing.move .passing_bar:before {
 	-webkit-animation: passing_bar 3s ease 4s 1.5 normal forwards;
 	animation: passing_bar 3s ease 4s 1.5 normal forwards;
@@ -527,15 +527,15 @@ margin: 0 auto;
 
 .catch_text .pad {
     padding-bottom: 15px;
-}
+} 
 
 /* フェードアップアニメーション */
-.fadeUp {
+/* .fadeUp {
     opacity : 0;
 display: none;
     transform : translate(0px, 10px);
     transition: 1s;
-}
+} */
 
 /* スクロールして見えたら見えるようになる */
 .fadeUp.scrollin {
