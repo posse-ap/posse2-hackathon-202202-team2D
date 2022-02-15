@@ -3,7 +3,7 @@
 
 //logoの表示
 $(window).on('load',function(){
-  $("#splash").delay(1000).fadeOut('slow');//ローディング画面を1秒（1000ms）待機してからフェードアウト
+  $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1秒（1000ms）待機してからフェードアウト
   $("#splash_logo").delay(900).fadeOut('slow');//ロゴを0.9秒（900ms）待機してからフェードアウト
 });
 
@@ -89,19 +89,51 @@ $('.catch_text').addClass('fadeUp');
 // $('.catch_text').addClass('fadeUp');
 // $('.catch_texts').addClass('fadeUp');
 
-// $(function(){
-    $(window).scroll(function (){
-        // console.log($(this).scrollTop());
 
-      $('.fadeUp').each(function(){
-        // var elementTop = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        // var windowHeight = $(window).height();
-        if (scroll > 400){
-          $(".fadeUp").addClass('scrollin');
-        }
-      });
-    });
+// $(function(){
+//     $(window).scroll(function (){
+//       $('fadeup').each(function(){
+//                 console.log('a');
+//         var elementTop = $(this).offset().top;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//                 console.log($(this).scrollTop());
+
+//         console.log('elementTop - windowHeight');
+//         if (scroll > elementTop - windowHeight -100){
+//           $(this).addClass('scrollin');
+//         }
+//       });
+//     });
+//   });
+
+function slideAnime(){
+  //====下に動くアニメーションここから===
+    $('.fadeUp').each(function(){
+            var elemPos = $(this).offset().top-70;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight){
+            // 下から上へ表示するクラスを付与
+            // テキスト要素を挟む親要素（下）とテキスト要素を元位置でアニメーションをおこなう
+            $(this).addClass("slideAnimeDownUp");
+            // 要素を下枠外に移動しCSS アニメーションで下から元の位置に移動
+            $(this).children(".fadeUp span").addClass("slideAnimeUpDown");
+            // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+            }else{
+            // 下から上へ表示するクラスを取り除く
+            $(this).removeClass("slideAnimeDownUp");
+            $(this).children(".fadeUp span").removeClass("slideAnimeUpDown");
+            }
+        });
+  }
+  
+  // 画面をスクロールをしたら動かしたい場合の記述
+  $(window).scroll(function (){
+    slideAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
 //   });
 
 // $('.toggle_btn').click(function () {
@@ -145,3 +177,36 @@ $('.catch_text').addClass('fadeUp');
 //     });
 //   });
 // });
+
+jQuery(function () {
+    var appear = false;
+    var pagetop = $('#page_top');
+    var goForm = $('.goForm');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {  //400pxスクロールしたら
+            if (appear == false) {
+                appear = true;
+                pagetop.stop().animate({
+                    'bottom': '20vw' //下から100pxの位置に
+                }, 400); //0.3秒かけて現れる
+                goForm.stop().animate({
+                    'bottom': '1vw' //下から100pxの位置に
+                }, 400); //0.3秒かけて現れる
+            }
+        } else {
+            if (appear) {
+                appear = false;
+                pagetop.stop().animate({
+                    'bottom': '-10vw' //下から-100pxの位置に
+                }, 300); //0.3秒かけて隠れる
+                goForm.stop().animate({
+                    'bottom': '-25vw' //下から-100pxの位置に
+                }, 300); //0.3秒かけて隠れる
+            }
+        }
+    });
+    pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 300); //0.5秒かけてトップへ戻る
+        return false;
+    });
+});

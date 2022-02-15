@@ -94,30 +94,20 @@ body {
     margin-left: 53vw;
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:900px) {
     .site_title img {
         width:180px;
     }
     
     .right_header {
-        margin-left: 30vw;
+        margin-left: 25vw;
+    }
+
+    .entry_button {
+        font-weight: bold;
     }
 }
 
-@media screen and (max-width:530px) {
-    
-    .site_title img {
-        width:170px;
-    }
-    
-    .right_header {
-        margin-left: 15vw;
-    }
-
-    #navi span {
-        font-weight:initial;
-    }
-}
 
 .under_line{
   position: relative;
@@ -198,12 +188,58 @@ body {
 
 } */
 
-.text_random_anime {
+@media screen and (max-width:530px) {
+    
+    .site_title img {
+        width:170px;
+    }
+    
+    .right_header {
+        margin-left: 15vw;
+    }
 
-        text-decoration: none;
+    .entry_button {
+        /* padding: 0 ; */
+            color: snow ;
+    background-color: #ff9933 ;
+    border: 1px solid red;
+    }
 
+    .entry_button span{
+        font-size: 2vw;
+    }
+
+    #navi span {
+        font-weight:initial;
+    }
 }
 
+@media screen and (max-width:400px) {
+    
+    .site_title img {
+        width:140px;
+    }
+    
+    .right_header {
+        margin-left: 15vw;
+    }
+
+    .entry_button {
+        width: 15vw;
+    }
+
+    .entry_button span{
+        font-size: 2.7vw;
+    }
+
+    #navi span {
+        font-weight:initial;
+    }
+}
+
+.text_random_anime {
+        text-decoration: none;
+}
 
 .text_random_anime span{
 	opacity: 0;
@@ -226,11 +262,8 @@ body {
 }
 
 
-/*
-ハンバーガーメニュー
-メニューが開いている時は、「left: 0;」「opacity: 1;」で
-画面左に表示する
-*/
+/*************** ハンバーガーメニュー開始 ***************/
+
 .open #navi {
   left: 0;
   opacity: 1;
@@ -310,6 +343,9 @@ body {
   cursor: pointer;
 }
 
+/*************** ハンバーガーメニュー終了 ***************/
+
+
 
 /*************** body ***************/
 .all_container {
@@ -320,6 +356,8 @@ body {
   justify-content: center;
 }
 
+
+/*************** ファーストビュー開始 ***************/
 /* ファーストビューの写真のdiv */
 .first_view {
   position: relative;
@@ -329,26 +367,7 @@ body {
 .first_view img {
   width: 100%;
   opacity: 0.5;
-}
-
-/* ファーストビュー内の文字 */
-.sub-title {
-  width: 100vw;
-  top: 20%;
-  left: 50%;
-  text-align: center;
-  opacity: 1;
-  position: absolute;
-  border: 5px solid rgba(250, 250, 250, 0.5);
-  background-color: rgba(255,255,255,0.8);
-  font-size: 6vw;
-  color: rgb(13,128,55);
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0;
-  font-family: "Sawarabi Mincho"; 
+  /* filter: blur(4px); */
 }
 
 
@@ -413,8 +432,8 @@ body {
       top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  /* height: 80%; */
+  width: 100vw;
+  /* height: 100%; */
 }
 .passing .passing_bar {
 	position: relative;
@@ -429,7 +448,7 @@ body {
 	content: '';
 	display: inline-block;
 	width: 0;
-	height: 100px;
+	height: 20vw;
 	position: absolute;
 	left: 0;
 	bottom: 0%;
@@ -452,13 +471,11 @@ body {
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	/* 任意の値 */
-	font-size: 4.0rem;
+	font-size: 6.5vw;
 	font-weight: bold;
 	line-height: 1.5;
     color: #0D8037;
 }
-
-
 
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
 
@@ -470,40 +487,35 @@ body {
 	-webkit-animation: passing_txt 1.5s ease 1s 1 normal forwards;
 	animation:passing_txt 1.5s ease 1s 1 normal forwards;  
 }
-/* .passing.move .passing_bar:before {
-	-webkit-animation: passing_bar 3s ease 4s 1.5 normal forwards;
-	animation: passing_bar 3s ease 4s 1.5 normal forwards;
-}
-.passing.move .passing_txt {
-	-webkit-animation: passing_txt 1.5s ease 5s 1 normal forwards;
-	animation:passing_txt 1.5s ease 5s 1 normal forwards;  
-} */
+
+/*************** ファーストビュー 終了  ***************/
+
+
 
 .main_container {
-    margin: 50px;
+    /* margin: 50px; */
     width: 100%;
-    height: 800px;
+    /* height: 800px; */
 }
 
+/*************** 文字全体部分 ***************//***************  ***************/
 .catch_texts {
-margin: 0 auto;
+margin: 5vw auto;
     width: 520px;
-    font-size: 20px;
+    font-size: 2vw;
     line-height: 40px;
     letter-spacing: .08em;
-    font-weight: bold;
     font-family: A1 Gothic M,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
 
         box-sizing: border-box;
     background-repeat: no-repeat;
 }
 
+/*************** 文字　pタグ ***************/
 .catch_text {
+    font-weight: bold;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
+    width: 100%;  
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -511,7 +523,6 @@ margin: 0 auto;
 }
 
 .catch_text span {
-
     width: 100%;
 }
 
@@ -529,22 +540,319 @@ margin: 0 auto;
     padding-bottom: 15px;
 }
 
-/* フェードアップアニメーション */
-.fadeUp {
-    opacity : 0;
-display: none;
-    transform : translate(0px, 10px);
-    transition: 1s;
+.catch_text_normal span　{
+    font-weight: normal;
 }
 
-/* スクロールして見えたら見えるようになる */
-.fadeUp.scrollin {
-display: block; 
-    opacity : 1;
-    transform : translate(0, 0);
+
+.fadeUp {
+  overflow: hidden;
+    display: inline-block;
 }
+
+.fadeUp span{
+  display: inline-block;
+}
+
+/* 上下のアニメーション*/
+.downAnime{
+    opacity: 0;/* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+    animation-name:slideTextY100;
+    animation-duration:0.8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY100 {
+    from {
+        transform: translateY(100%);/* 要素を上の枠外に移動*/
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);/* 要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+.slideAnimeUpDown {
+    animation-name:slideTextY-100;
+    animation-duration:0.8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+    from {
+        transform: translateY(-100%);/* 要素を下の枠外に移動*/
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);/* 要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+
+/*************** 文字部分レスポンシブ  ***************/
+
+@media screen and (max-width:800px) {
+
+    .catch_texts {
+    /* margin:  auto; */
+    width: 52vw;
+    font-size: 2.5vw;
+    line-height: 30px;
+    letter-spacing: .08em;
+}
+
+}
+
+@media screen and (max-width:640px) {
+
+    .catch_texts {
+    margin: 10vw auto;
+    width: 60vw;
+    font-size: 3vw;
+    line-height: 35px;
+    letter-spacing: .08em;
+}
+
+}
+
+@media screen and (max-width:550px) {
+
+    .catch_texts {
+    margin: 10vw auto;
+    width: 65vw;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .04em;
+}
+
+}
+
+
+
 
 /* フッターの指定 */
+
+/* LINEの右下固定追加 */
+.goForm {
+    font-size:2vw;
+  position: fixed;
+  text-decoration: none;
+  right: 5px;
+  bottom: -150px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(8, 136, 8);
+  width: 13vw;
+  height: 13vw;
+  /* border-radius: 100%; */
+  margin: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: bold;
+  border: 0.3vw solid #fcfafa;
+  /* animation-name: fuwa; */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+}
+
+@keyframes fuwa {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, -5px);
+  }
+}
+
+/* トップへ戻る */
+#page_top{
+  width: 4vw;
+  height: 4vw;
+  position: fixed;
+  right: 10px;
+  bottom: -80px;
+  background: #4c4c4c;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#page_top a{
+  position: relative;
+  display: block;
+  width: 3vw;
+  height: 3vw;
+  text-decoration: none;
+}
+
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  content: '\f106';
+  font-size: 3vw;
+  color: #fff;
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+      top: 10%;
+  left:13%;
+  /* transform: translate(-50%, -50%); */
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width:700px) {
+
+/* LINEの右下固定追加 */
+.goForm {
+  font-size: 13px;
+  right: 5px;
+  bottom: -150px;
+  z-index: 99;
+  width: 13vw;
+  height: 13vw;
+  /* border-radius: 100%; */
+  margin: 10px;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: bold;
+  border: 0.3vw solid #fcfafa;
+}
+
+/* トップへ戻る */
+#page_top{
+  width: 5vw;
+  height: 5vw;
+  position: fixed;
+  right: 10px;
+  bottom: -80px;
+  background: #4c4c4c;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#page_top a{
+  width: 5vw;
+  height: 5vw;
+}
+
+#page_top a::before{
+  font-size: 4vw;
+  color: #fff;
+  width: 3vw;
+  height: 3vw;
+      top: 10%;
+  left:18%;
+}
+
+}
+
+
+@media screen and (max-width:550px) {
+
+/* LINEの右下固定追加 */
+.goForm {
+  font-size: 10px;
+  right: 5px;
+  bottom: -150px;
+  z-index: 99;
+  width: 13vw;
+  height: 13vw;
+  /* border-radius: 100%; */
+  margin: 10px;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: bold;
+  border: 0.3vw solid #fcfafa;
+}
+
+/* トップへ戻る */
+#page_top{
+  width: 5vw;
+  height: 5vw;
+  position: fixed;
+  right: 10px;
+  bottom: -80px;
+  background: #4c4c4c;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#page_top a{
+  width: 5vw;
+  height: 5vw;
+}
+
+#page_top a::before{
+  font-size: 4vw;
+  color: #fff;
+  width: 3vw;
+  height: 3vw;
+      top: 10%;
+  left:18%;
+}
+
+}
+
+@media screen and (max-width:374px) {
+
+/* LINEの右下固定追加 */
+.goForm {
+  font-size: 10px;
+  right: 5px;
+  bottom: -150px;
+  z-index: 99;
+  width: 15vw;
+  height: 15vw;
+  /* border-radius: 100%; */
+  margin: 10px;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: bold;
+  border: 0.3vw solid #fcfafa;
+}
+
+/* トップへ戻る */
+#page_top{
+  width: 5vw;
+  height: 5vw;
+  position: fixed;
+  right: 10px;
+  bottom: -80px;
+  background: #4c4c4c;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#page_top a{
+  width: 5vw;
+  height: 5vw;
+}
+
+#page_top a::before{
+  font-size: 4vw;
+  color: #fff;
+  width: 3vw;
+  height: 3vw;
+      top: 10%;
+  left:18%;
+}
+
+}
+
+
+
 
 .footer {
   background-color: rgb(8, 165, 66);
