@@ -481,12 +481,12 @@ body {
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
 
 .passing.move .passing_bar:before {
-	-webkit-animation: passing_bar 1s ease 1s 1.5 normal forwards;
-	animation: passing_bar 1s ease 1s 1.5 normal forwards;
+	-webkit-animation: passing_bar 1s ease 2s 1.5 normal forwards;
+	animation: passing_bar 1s ease 2s 1.5 normal forwards;
 }
 .passing.move .passing_txt {
-	-webkit-animation: passing_txt 1.5s ease 1s 1 normal forwards;
-	animation:passing_txt 1.5s ease 1s 1 normal forwards;  
+	-webkit-animation: passing_txt 1.5s ease 2s 1 normal forwards;
+	animation:passing_txt 1.5s ease 2s 1 normal forwards;  
 }
 
 
@@ -578,8 +578,23 @@ margin: 5vw auto;
     padding-bottom: 15px;
 }
 
-.catch_text_normal span　{
+.catch_text_normal {
+    margin: 8vw 0;
+}
+
+.catch_text_normal p　{
     font-weight: normal;
+      font-family: "TsukuARdGothic-Regular";
+
+}
+
+.margin_large span　{
+    border-bottom: 1px solid #ff9933;
+}
+
+.slideAnimeUpDown{
+    background:linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
+    font-weight: bold;
 }
 
 @media screen and (max-width:800px) {
@@ -917,8 +932,189 @@ width: 75vw;
 
 }
 
+/* 画像&テキストのセット */
+.body_unit {
+    width: 100%;
+height: 50vw;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10vw 5vw 3vw; */
+  padding-bottom: 4vw;
+  margin: 10vw 0 20vw;
+}
+
+/* 画像のdiv */
+.img_container {    
+  width: 100%;
+  position: relative;
+  /* padding: 0 1.2rem; */
+}
+
+/* 画像自体 */
+.img_container img {
+  width: 100%;
+  height: 50vw;
+  object-fit: cover; 
+  position: absolute;
+}
+
+/* About画像切り替え */
+.change-img1 {
+  overflow: hidden;
+  position: relative;
+}
+
+/* 見出し＆文章部分 */
+.text_container {
+position: absolute;
+left:0;
+padding: 3vw;
+  width: 40%;
+  background-color: rgba(24, 182, 77, 0.6);
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", serif;
+}
+
+/* 見出し */
+.heading {
+  font-size: 3vw;
+  margin-bottom: 0.8em;
+}
+
+/* アンダーラインのアニメーション */
+.underline {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+    border-left :solid 5px orange;
+  border-bottom: solid 1px gray;
+  /*余白をつけておきます*/
+  padding: 10px;
+}
+
+/* アンダーライン続き */
+.underline::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ff9933;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .5s;
+}
+
+/* ホバー時にアンダーライン展開 */
+.underline:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/* 文章部分 */
+.text_container p {
+  font-size: 1.8vw;
+  line-height: 2;
+}
+
+@media screen and (max-width:900px) {
+
+    /* 文章部分 */
+.text_container p {
+  font-size: 2vw;
+  line-height: 1.8;
+}
+}
+
+@media screen and (max-width:800px) {
+
+    .text_container {
+        width: 50%;
+    }
+
+    /* 文章部分 */
+.text_container p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+  .underline {
+  padding: 8px;
+  }
+
+  .heading {
+  margin-bottom: 0.5em;
+}
+
+}
+
+@media screen and (max-width:700px) {
+
+   .heading {
+  font-size: 4vw;
+}
+}
+
+@media screen and (max-width:630px) {
+
+        .text_container {
+        width: 60%;
+    }
+
+    .text_container p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 画像自体 */
+.img_container img {
+  height: 70vw;
+}
+
+.body_unit {
+    height: 70vw;
+}
+
+   .heading {
+  font-size: 4.8vw;
+}
+
+}
+
+@media screen and (max-width:460px) {
+
+   .heading {
+  font-weight: bold;
+}
+
+  .underline {
+  padding: 6px;
+  }
+
+    .text_container p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+}
+
+/* フェードアップアニメーション */
+.fade_down {
+    opacity : 0;
+    transform : translate(0px, 200px);
+    transition:all 3s;
+}
+
+/* スクロールして見えたら見えるようになる */
+.fade_down.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+} 
 
 
+
+
+
+/*////////////*　ふったー ////////////////*/
 
 .footer {
   background-color: rgb(8, 165, 66);

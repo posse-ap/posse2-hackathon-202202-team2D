@@ -85,22 +85,20 @@ $(function () {
 });
 
 
-$('.catch_text').addClass('fadeUp');
+$('.catch_text span').addClass('fadeUp');
+$('.catch_text_normal p').addClass('fadeUp');
 // $('.catch_text').addClass('fadeUp');
 // $('.catch_texts').addClass('fadeUp');
 
 
 // $(function(){
 //     $(window).scroll(function (){
-//       $('fadeup').each(function(){
-//                 console.log('a');
+//       $('fade_down').each(function(){
 //         var elementTop = $(this).offset().top;
 //         var scroll = $(window).scrollTop();
 //         var windowHeight = $(window).height();
 //                 console.log($(this).scrollTop());
-
-//         console.log('elementTop - windowHeight');
-//         if (scroll > elementTop - windowHeight -100){
+//         if (scroll > elementTop - windowHeight -1000){
 //           $(this).addClass('scrollin');
 //         }
 //       });
@@ -109,29 +107,46 @@ $('.catch_text').addClass('fadeUp');
 
 function slideAnime() {
   //====下に動くアニメーションここから===
-  $('.fadeUp').each(function () {
-    var elemPos = $(this).offset().top - 70;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      // 下から上へ表示するクラスを付与
-      // テキスト要素を挟む親要素（下）とテキスト要素を元位置でアニメーションをおこなう
-      $(this).addClass("slideAnimeDownUp");
-      // 要素を下枠外に移動しCSS アニメーションで下から元の位置に移動
-      $(this).children(".fadeUp span").addClass("slideAnimeUpDown");
-      // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
-    } else {
-      // 下から上へ表示するクラスを取り除く
-      $(this).removeClass("slideAnimeDownUp");
-      $(this).children(".fadeUp span").removeClass("slideAnimeUpDown");
-    }
-  });
-}
 
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-  slideAnime();/* アニメーション用の関数を呼ぶ*/
-});// ここまで画面をスクロールをしたら動かしたい場合の記述
+    $('.fadeUp').each(function(){
+            var elemPos = $(this).offset().top+10;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight){
+            // 下から上へ表示するクラスを付与
+            // テキスト要素を挟む親要素（下）とテキスト要素を元位置でアニメーションをおこなう
+            $(this).addClass("slideAnimeDownUp");
+            // 要素を下枠外に移動しCSS アニメーションで下から元の位置に移動
+            $(this).children(".fadeUp span").addClass("slideAnimeUpDown");
+            // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+            }else{
+            // 下から上へ表示するクラスを取り除く
+            $(this).removeClass("slideAnimeDownUp");
+            $(this).children(".fadeUp span").removeClass("slideAnimeUpDown");
+            }
+        });
+  }
+  
+  // 画面をスクロールをしたら動かしたい場合の記述
+  $(window).scroll(function (){
+    slideAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// 画面切り替えアニメーション
+for (let i = 1; i < 4; i++) {
+  $(function () {
+    var setImg = '.change-img'+ i +'';
+    var fadeSpeed = 2000;
+    var switchDelay = 3000;
+
+    $(setImg).children('img').css({ opacity: '0' });
+    $(setImg + ' img:first').stop().animate({ opacity: '1', zIndex: '20' }, fadeSpeed);
+
+    setInterval(function () {
+        $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
+    }, switchDelay);
+});
+}
 
 
 //   });
@@ -177,6 +192,7 @@ $(window).scroll(function () {
 //     });
 //   });
 // });
+
 
 jQuery(function () {
   var appear = false;
