@@ -229,50 +229,53 @@ jQuery(function () {
 
 // Quote Generator
 
-var picture =[
-  '../img/eventphoto1',
-  '../img/eventphoto2',
-  '../img/eventphoto3',
-  '../img/eventphoto4',
-  '../img/eventphoto5',
-  '../img/eventphoto6',
+var square =[
+  '../img/square0.jpg',
+  '../img/square1.jpg',
+  '../img/square2.jpg',
 ]
 
-var eventName = [
-  'eventName1',
-  'eventName2',
-  'eventName3',
-  'eventName4',
-  'eventName5',
-  'eventName6',
-] 
+var oblong = [
+  '../img/oblong0.jpg',
+]
+
+var vertical =[
+  '../img/vertical0.jpg',
+  '../img/vertical1.jpg',
+  '../img/vertical2.jpg',
+]
 
 let quote = document.getElementById('quote');
+// var r = Math.floor(Math.random()*(picture.length));
+
 
 quote.insertAdjacentHTML("beforeend",
-  `<div class="wrapper">`
-  + `<header>POSSE②の日常</header>`
+`<div class="quote_wrapper">`
+  + `<header>Photo gallery of POSSE②</header>`
   + `<div class="content">`
   + `<div class="img_area">`
-  + `<div><img src="${picture[r]}" alt=""></div>`
-  + `</div>`
-  + `</div>`
-  + `<div class="event">`
-  + `<span>__</span>`
-  + `<span class="name">${eventName[r]}</span>`
+  + `<div class="square_img"><img src=${square[1]} alt=""></div>`
+  + `<div class="oblong_img"><img src=${oblong[0]} alt=""></div>`
+  + `<div class="vertical_img"><img src=${vertical[1]} alt=""></div>`
   + `</div>`
   + `</div>`
   + `<div class="buttons">`
   + `<div class="features">`
-  + `<div>`
-  + `<a href="">POSSE②の歴史って？</a>`
-  + `</div>`
   + `<button>New Photo</button>`
   + `</div>`
   + `</div>`
 );
 
-const button = document.querySelector("button");
+let img = document.getElementById("img");
+let src = img.getAttribute("src");
+const name = document.getElementById("name");
+const button = document.getElementById("button");
 
-button.addEventListener("click",function(){
-})
+
+button.addEventListener('click',function(){
+  var r = Math.floor(Math.random()*picture.length)
+  console.log(r)
+  console.log(src)
+  img.src = picture[r]
+});
+
