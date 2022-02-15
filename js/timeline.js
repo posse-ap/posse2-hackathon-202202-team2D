@@ -7,7 +7,7 @@ $(function () {
     // フェード前のcssを定義
     $(".event1").css({
         opacity: 0,
-        transform: "translateX(-" + fade_move + "px)",
+        transform: "translateX(" + fade_move + "px)",
         transition: fade_time + "ms",
     });
     // スクロールまたはロードするたびに実行
@@ -34,7 +34,7 @@ $(function () {
     // フェード前のcssを定義
     $(".event2").css({
         opacity: 0,
-        transform: "translateX(" + fade_move + "px)",
+        transform: "translateX(-" + fade_move + "px)",
         transition: fade_time + "ms",
     });
     // スクロールまたはロードするたびに実行
@@ -61,7 +61,7 @@ $(function () {
     // フェード前のcssを定義
     $(".event3").css({
         opacity: 0,
-        transform: "translateX(-" + fade_move + "px)",
+        transform: "translateX(" + fade_move + "px)",
         transition: fade_time + "ms",
     });
     // スクロールまたはロードするたびに実行
