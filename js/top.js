@@ -275,3 +275,63 @@ jQuery(function () {
   });
 });
 
+
+// Quote Generator
+
+const square =[
+  '../img/square0.jpg',
+  '../img/square1.jpg',
+  '../img/square2.jpg',
+]
+
+const oblong = [
+  '../img/oblong0.jpg',
+]
+const vertical =[
+  '../img/vertical0.jpg',
+  '../img/vertical1.jpg',
+]
+
+// let quote = document.getElementById('quote');
+// var r = Math.floor(Math.random()*(picture.length));
+
+
+// quote.insertAdjacentHTML("beforeend"
+// `<div class="quote_wrapper">`
+//   + `<header>Photo gallery of POSSE②</header>`
+//   + `<div class="content">`
+//   + `<div class="img_area">`
+//   + `<div class="square_img"><img src=${square[1]} alt=""></div>`
+//   + `<div class="oblong_img"><img src=${oblong[0]} alt=""></div>`
+//   + `<div class="vertical_img"><img src=${vertical[1]} alt=""></div>`
+//   + `</div>`
+//   + `</div>`
+//   + `<div class="buttons">`
+//   + `<div class="features">`
+//   + `<button id="button">New Photo</button>`
+//   + `</div>`
+//   + `</div>`
+// );
+
+let squareImg = document.getElementById("squareImg");
+let oblongImg = document.getElementById("oblongImg");
+let verticalImg = document.getElementById("verticalImg");
+const button = document.getElementById("button");
+
+let squareSrc = squareImg.getAttribute("src");
+let oblongSrc = oblongImg.getAttribute("src");
+let verticalSrc = verticalImg.getAttribute("src");
+button.addEventListener('click',function(){
+  var s = Math.floor(Math.random()*square.length)
+  var o = Math.floor(Math.random()*oblong.length)
+  var v = Math.floor(Math.random()*vertical.length)
+  console.log(s)
+  console.log(o)
+  console.log(v)
+  console.log(squareImg.src)
+  console.log(oblongImg.src)
+  console.log(verticalImg.src)
+  squareImg.src = square[s]
+  oblongImg.src = oblong[o]
+  verticalImg.src = vertical[v]
+});

@@ -1488,7 +1488,7 @@ top:63%;
 /* Quote Generator */
 .quote_wrapper {
   width: auto;
-  height: 600px;
+  height: 450px;
   background: #fff;
   border-radius: 15px;
   padding: 30px 30px 25px;
@@ -1511,30 +1511,35 @@ top:63%;
   position: relative;
 }
 
-.square_img {
+.square {
   position: absolute;
-  width: 20em;
+  width: 15em;
   height: auto;
-  top: 0;
-  right: 28em;
+  top: 6em;
+  right: 27em;
 }
 
-.oblong_img {
+.oblong {
   position: absolute;
   width: 25em;
   height: auto;
-  top: 7em;
-  right: 45em;
+  top: -0.5em;
+  right: 43em;
 }
 
-.vertical_img {
+.vertical {
   position: absolute;
-  height: 30em;
-  width: auto;
-  top: 4em;
-  right: 10em;
+  width: 15em;
+  height: auto;
+  top: 0em;
+  right: 11em;
 }
 
+.quote_img {
+  width: 30%;
+  height: auto;
+}
+ 
 .content {
   display: flex;
   font-size: 18px;
@@ -1549,7 +1554,6 @@ top:63%;
 
 .buttons .features {
   display: flex;
-  margin-top: 20px;
   align-items: center;
   justify-content: space-between;
 }
