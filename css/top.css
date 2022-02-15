@@ -594,6 +594,20 @@ display: block;
   height: 100%;
 }
 
+@media only screen and (max-width: 570px) {
+
+  .footer_logo_wrapper img {
+    width: 200px;
+    height: auto;
+  }
+
+  .footer_logo_wrapper {
+    width: auto;
+    align-items: center;
+    margin: 30px auto 20px;
+  }
+}
+
 /* POSSEマークホバーで色変化 */
 
 .footer_logo_wrapper img:hover {
