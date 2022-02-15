@@ -1,0 +1,9 @@
+
+
+
+
+.questioner .answerer{
+    width: 50px;
+    /* min-width: 100px; */
+    border-radius: 50%;
+}
