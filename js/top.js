@@ -85,6 +85,25 @@ $(function () {
 });
 
 
+var startPos = 0, winScrollTop = 0;
+// scrollイベントを設定
+window.addEventListener('scroll', function () {
+    winScrollTop = this.scrollY;
+    if (winScrollTop >= startPos) {
+        // 下にスクロールされた時
+        if (winScrollTop >= 400) {
+            // 下に200pxスクロールされたら隠す
+            document.getElementById('entryButton').classList.add('hide');
+        }
+    } else if (winScrollTop <= 400){
+        // 上にスクロールされた時
+        document.getElementById('entryButton').classList.remove('hide');
+    }
+    startPos = winScrollTop;
+});
+
+
+
 $('.catch_text span').addClass('fadeUp');
 $('.catch_text_normal p').addClass('fadeUp');
 // $('.catch_text').addClass('fadeUp');
@@ -98,10 +117,10 @@ $('.catch_text_normal p').addClass('fadeUp');
 //         var scroll = $(window).scrollTop();
 //         var windowHeight = $(window).height();
 //                 console.log($(this).scrollTop());
-//         if (scroll > elementTop - windowHeight -1000){
+//         if (scroll > elementTop - windowHeight +300){
 //           $(this).addClass('scrollin');
 //         }
-//       });
+//       }); 
 //     });
 //   });
 
@@ -132,10 +151,39 @@ function slideAnime() {
     slideAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面をスクロールをしたら動かしたい場合の記述
 
+
+function slideAnime2() {
+  //====下に動くアニメーションここから===
+
+    $('.fadeDown').each(function(){
+            var elemPos = $(this).offset().top+10;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight){
+            // 下から上へ表示するクラスを付与
+            // テキスト要素を挟む親要素（下）とテキスト要素を元位置でアニメーションをおこなう
+            $(this).addClass("slideAnimeDownUp");
+            // 要素を下枠外に移動しCSS アニメーションで下から元の位置に移動
+            $(this).children(".fadeUp span").addClass("slideAnimeUpDown");
+            // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+            }else{
+            // 下から上へ表示するクラスを取り除く
+            $(this).removeClass("slideAnimeDownUp");
+            $(this).children(".fadeUp span").removeClass("slideAnimeUpDown");
+            }
+        });
+  }
+  
+  // 画面をスクロールをしたら動かしたい場合の記述
+  $(window).scroll(function (){
+    slideAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
 // 画面切り替えアニメーション
 for (let i = 1; i < 4; i++) {
   $(function () {
     var setImg = '.change-img'+ i +'';
+    // var setImg = '.change-img1';
     var fadeSpeed = 2000;
     var switchDelay = 3000;
 
@@ -204,20 +252,20 @@ jQuery(function () {
         appear = true;
         pagetop.stop().animate({
           'bottom': '20vw' //下から100pxの位置に
-        }, 400); //0.3秒かけて現れる
+        }, 600); //0.3秒かけて現れる
         goForm.stop().animate({
           'bottom': '1vw' //下から100pxの位置に
-        }, 400); //0.3秒かけて現れる
+        }, 600); //0.3秒かけて現れる
       }
     } else {
       if (appear) {
         appear = false;
         pagetop.stop().animate({
-          'bottom': '-10vw' //下から-100pxの位置に
-        }, 300); //0.3秒かけて隠れる
+          'bottom': '-20vw' //下から-100pxの位置に
+        }, 600); //0.3秒かけて隠れる
         goForm.stop().animate({
-          'bottom': '-25vw' //下から-100pxの位置に
-        }, 300); //0.3秒かけて隠れる
+          'bottom': '-30vw' //下から-100pxの位置に
+        }, 600); //0.3秒かけて隠れる
       }
     }
   });
@@ -227,62 +275,63 @@ jQuery(function () {
   });
 });
 
+
 // Quote Generator
 
-const picture =[
-  '../img/timeline_img1.jpg',
-  '../img/timeline_img2.jpg',
-  '../img/timeline_img3.jpg',
-  '../img/timeline_img4.jpg',
-  '../img/timeline_img5.jpg',
+const square =[
+  '../img/square0.jpg',
+  '../img/square1.jpg',
+  '../img/square2.jpg',
 ]
 
-const eventName = [
-  'eventName1',
-  'eventName2',
-  'eventName3',
-  'eventName4',
-  'eventName5',
-  'eventName6',
-] 
+const oblong = [
+  '../img/oblong0.jpg',
+]
+const vertical =[
+  '../img/vertical0.jpg',
+  '../img/vertical1.jpg',
+]
 
 // let quote = document.getElementById('quote');
 // var r = Math.floor(Math.random()*(picture.length));
 
 
-// quote.insertAdjacentHTML("beforeend",
-//   `<div class="wrapper">`
-//   + `<header>POSSE②の日常</header>`
+// quote.insertAdjacentHTML("beforeend"
+// `<div class="quote_wrapper">`
+//   + `<header>Photo gallery of POSSE②</header>`
 //   + `<div class="content">`
-//     + `<div class="img_area">`
-//       + `<div><img id="img" src=${picture[r]} alt=""></div>`
-//     + `</div>`
+//   + `<div class="img_area">`
+//   + `<div class="square_img"><img src=${square[1]} alt=""></div>`
+//   + `<div class="oblong_img"><img src=${oblong[0]} alt=""></div>`
+//   + `<div class="vertical_img"><img src=${vertical[1]} alt=""></div>`
 //   + `</div>`
-//   + `<div class="event">`
-//     + `<span>__</span>`
-//     + `<span id="name">${eventName[r]}</span>`
 //   + `</div>`
-// + `</div>`
 //   + `<div class="buttons">`
-//     + `<div class="features">`
-//       + `<div>`
-//         + `<a href="">POSSE②の歴史って？</a>`
-//       + `</div>`
-//       + `<button id="button">New Photo</button>`
-//     + `</div>`
+//   + `<div class="features">`
+//   + `<button id="button">New Photo</button>`
+//   + `</div>`
 //   + `</div>`
 // );
 
-let img = document.getElementById("img");
-let src = img.getAttribute("src");
-const name = document.getElementById("name");
+let squareImg = document.getElementById("squareImg");
+let oblongImg = document.getElementById("oblongImg");
+let verticalImg = document.getElementById("verticalImg");
 const button = document.getElementById("button");
 
-
+let squareSrc = squareImg.getAttribute("src");
+let oblongSrc = oblongImg.getAttribute("src");
+let verticalSrc = verticalImg.getAttribute("src");
 button.addEventListener('click',function(){
-  var r = Math.floor(Math.random()*picture.length)
-  console.log(r)
-  console.log(src)
-  img.src = picture[r]
+  var s = Math.floor(Math.random()*square.length)
+  var o = Math.floor(Math.random()*oblong.length)
+  var v = Math.floor(Math.random()*vertical.length)
+  console.log(s)
+  console.log(o)
+  console.log(v)
+  console.log(squareImg.src)
+  console.log(oblongImg.src)
+  console.log(verticalImg.src)
+  squareImg.src = square[s]
+  oblongImg.src = oblong[o]
+  verticalImg.src = vertical[v]
 });
-
