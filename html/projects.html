@@ -16,17 +16,173 @@
 </head>
 
 <body>
+    <header id="header" class="wrapper">
+        <h1 class="site_title">
+            <a href="../html/top.html"><img src="../img/9.png" alt="POSSE②ロゴ"></a>
+        </h1>
 
-<h1 class="ke">大好き</h1>
+        <div class="right_header">
+            <!-- <button class="entry_button">ENTRY</button> -->
+            <a class="entry_button text_random_anime"
+                href="https://docs.google.com/forms/d/1iFjwRYh-WxPEn92TfUJ7ddOcWRiMJ_Uo8Xu68L904ZM/viewform?edit_requested=true"
+                target="blank">
+                <span>FORM入力</span></a>
+            <nav id="navi">
+                <ul class="nav_menu">
+                    <li class="under_line"><a class="text_random_anime" href="../html/timeline.html">TIMELINE</a></li>
+                    <li class="under_line"><a class="text_random_anime" href="../html/projects.html">PROJECTS</a></li>
+                    <li class="under_line"><a class="text_random_anime" href="../html/speech.html">SPEECH</a></li>
+                    <!-- <li><a href="mailto:xxxxx@xxx.xxx.com?subject=お問い合わせ">CONTACT</a></li> -->
+                </ul>
+            </nav>
+        </div>
+
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div id="mask"></div>
+    </header>
+
+    <div class="all_container">
+        <div class="first_view">
+            <img src="../img/members_all.jpg" alt="">
+            <!-- <p class="sub-title">「自分史上最高」を仲間と。</p> -->
+            <div class="passing move">
+                <div class="passing_box">
+                    <div class="passing_bar">
+                        <div class="passing_txt right_to_left">自分史上最高を<br>仲間と。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- headerここまで -->
+
+
+    <h1 class="main_title">何ができるのか？</h1>
+
+    <ul class="tiles">
+        <li class="tile">
+            <div class="p-arrow-label">
+                <div class="c-arrow-label">
+                  <div class="c-arrow-label__item">入会から１ヶ月</div>
+                </div>
+            </div>
+            <img class="tl_img" src="/img/kuizy.jpg" alt="">
+            <div class="details">
+                <span class="title">kuizy</span>
+                <span class="info">posseで初めてつくった制作物。クリックすると色が変わったり、隠れていた要素が表示されるたりする。製作期間はおよそ1ヶ月。覚えたばかりの新しい知識を一つずつ組み込みながら出来上がっていく様子は感慨深いものがある。</span>
+            </div>
+        </li>
+        <li class="tile">
+            <div class="p-arrow-label">
+                <div class="c-arrow-label">
+                  <div class="c-arrow-label__item">入会から1.5ヶ月</div>
+                </div>
+            </div>
+            <img class="tl_img" src="/img/newhackathon.jpg" alt="">
+            <div class="details">
+                <span class="title">新人ハッカソン</span>
+                <span class="info">初のチームでの制作。ボタンをクリックすると表示されるページが切り替わる。製作期間は2日。期限が決められているので、やりたいことが全てできるわけじゃないことを知った。</span>
+            </div>
+        </li>
+        <li class="tile">
+            <div class="p-arrow-label">
+                <div class="c-arrow-label">
+                  <div class="c-arrow-label__item">入会から２ヶ月</div>
+                </div>
+            </div>
+            <img class="tl_img" src="/img/color_sound.jpg" alt="">
+            <div class="details">
+                <span class="title">Color Sound</span>
+                <span class="info">posse②のとある2.5期生が制作した。色のコードを入力するとそれに応じた音が鳴る。制作期間は2日。こんなふうに自分が実装したいものを自分の手で企画・制作する人もいてお互いに高めあっている。</span>
+            </div>
+        </li>
+    </ul>
+    <!-- 概要ここまで -->
 
 
 
+    <h1 class="main_title">ゲームだって</h1>
+    <h1 class="main_title">つくれちゃう！？！？</h1>
+
+    <h1>（例）ブロック崩し</h1>
+    <div id="canvas-wrapper">
+        <canvas id="myCanvas" class="canvas-responsive" width="300" height="300"></canvas>
+            <div id="leftButton" class="button" style="float:left">
+                <div>
+                    <div class="left"></div>
+                </div>
+            </div>
+
+            <div id="rightButton" class="button" style="float:right">
+                <div>
+                    <span class="right"></ｓ>
+                </div>
+            </div>
+    </div>
+    <!-- ミニゲームここまで -->
+
+    <footer class="footer">
+        <a class="goForm"
+            href="https://docs.google.com/forms/d/1iFjwRYh-WxPEn92TfUJ7ddOcWRiMJ_Uo8Xu68L904ZM/viewform?edit_requested=true">
+            POSSE②<br>加入は<br>こちらから!
+        </a>
+        <div id="page_top">
+            <a href="#top" onclick="$('html,body').animate({ scrollTop: 0 }); return false;"></a>
+        </div>
+        <div class="footer_wrapper">
+            <!-- <span class="footer_message">SPECIAL THANKS!</span> -->
+            <div class="posse2_logo_wrapper">
+                <div class="posse2_logo"><img class="fotter_logo2" src="../img/posse2_logo_black.jpg" alt=""></div>
+            </div>
+            <a href="https://posse-ap.com/" class="footer_logo_wrapper">
+                <img src="https://posse.anti-pattern.co.jp/img/posseLogo.png" alt="" class="footer-posse-logo">
+            </a>
+
+            <div class="fotter_menu_container">
+                <ul class="fotter_menu_wrapper">
+                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/timeline.html">TIMELINE</a></li>
+                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/projects.html">PROJECTS</a></li>
+                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/speech.html">SPEECH</a></li>
+                </ul>
+            </div>
+
+            <!-- SNSのリンクを含む箱 -->
+            <div class="footer_sns_box">
+                <p class="footer_sns_text">SHARE</p>
+                <ul class="footer_sns_link">
+                    <li>
+                        <a href="https://twitter.com/posse_program">
+                            <!-- <img class="logo_twitter" src="../img/twitter.svg" alt=""> -->
+                            <i class="fab fa-twitter fa-2x" id="twitter-logo"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/posse_programming/">
+                            <!-- <img class="logo_instagram" src="../img/instagram.svg" alt=""> -->
+                            <i class="fab fa-instagram fa-2x" id="instagram-logo"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://line.me/R/ti/p/@651htnqp?from=page">
+                            <!-- <img class="logo_line" src="../img/line.svg" alt=""> -->
+                            <i class="fab fa-line fa-2x" id="line-logo"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footerここまで -->
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="../js/top.js"></script>
-<script src="../js/projects.js"></script>
+<script src="/js/projects.js"></script>
 </body>
 
 </html>

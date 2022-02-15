@@ -1,0 +1,320 @@
+/* PCサイズ */
+@media screen and (min-width: 800px){
+* { 
+    /* padding: 0;
+     margin: 0; */
+     /* background-color: aqua; */
+}
+/* @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css); */
+.tiles {
+padding: 30px 0 0;
+  /* flex-wrap: wrap; */
+  margin: 1vw;
+  display: flex;
+  /* justify-content: center; */
+  /* position: relative; */
+  z-index: 150;
+
+  /* width: 1040px; */
+  /* gap: 20px; */
+  /* font-size: 0; */
+  /* text-align: center; */
+  /* position: absolute; */
+
+}
+
+.main_title{
+  font-size: 3rem;
+  /* margin: 6rem 0rem 9rem 0rem; */
+  width: 30rem;
+  left: 0;
+  right: 0;
+  margin: 6rem auto;
+
+}
+.rotateX{
+  animation-name:rotateXAnime;
+  animation-duration:1.7s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes rotateXAnime{
+  from{
+    transform: rotateX(0);
+    }
+  to{
+    transform: rotateX(-360deg);
+    }
+}
+
+
+.c-arrow-label {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 9rem;
+}
+
+.c-arrow-label__item {
+  position: relative;
+  background-color: #0D8037;
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 3rem;
+  width: 100%;
+}
+.c-arrow-label__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.2rem;
+  border-top: solid 1.5rem transparent;
+  border-bottom: solid 1.5rem transparent;
+  border-left: solid 1.2rem #0D8037;
+}
+
+.tiles .tile {
+  display: inline-block;
+  width: 30vw;
+  height: 100%;
+  /* margin: 20px; */
+  text-align: left;
+  opacity: 0.99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  /* box-shadow: 0 0 20px 0 snow; */
+      transition:1s all;
+}
+.tile{
+  margin: 1vw;
+}
+.tiles .tile:before {
+  content: "";
+  background: linear-gradient(to bottom, rgb(0,0,0,0) 0%,  #0D8037 70%);
+  width: 100%;
+  height: 70%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  /* transition-property: top, opacity; */
+  transition: 0.5s ease;
+  /* transition-duration: 0.3s; */
+}
+.tiles .tile img {
+  display: block;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition:1s all;
+}
+
+.tiles .tile img:hover {
+    /* transform:scale(1.1,1.1); */
+    /* transition:1s all; */
+}
+span:not([class]){
+  color: orange;
+}
+.tiles .tile:hover {
+    /* transform:scale(1.1,1.1); */
+
+    /* box-shadow: 5px 5px 5px 5px snow, -5px -5px 5px 5px snow; */
+    transition:1s all;
+}
+
+.tiles .tile .details {
+  font-size: 16px;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.tiles .tile .details span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  transition-property: top, opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+.tiles .tile .details .title {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 18px;
+}
+.tiles .tile .details .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.tiles .tile:focus:before,
+.tiles .tile:focus span,
+.tiles .tile:hover:before,
+.tiles .tile:hover span {
+  opacity: 1;
+}
+.tiles .tile:focus:before, .tiles .tile:hover:before {
+  top: 50%;
+}
+.tiles .tile:focus span,
+.tiles .tile:hover span {
+  top: 0;
+}
+.tiles .tile:focus .title, .tiles .tile:hover .title {
+  transition-delay: 0.15s;
+}
+.tiles .tile:focus .info, .tiles .tile:hover .info {
+  transition-delay: 0.25s;
+}
+
+
+
+}
+
+
+
+
+
+
+/* スマホサイズ */
+@media screen and (max-width: 800px){
+  .tiles{
+    margin: 20px;
+  }
+  .tl_img{
+    box-shadow: black 5px;
+  }
+  .details{
+    position: absolute;
+    top: 70%;
+  }
+
+}
+/* ここまで概要 */
+
+h1{
+  text-align:center;
+}
+canvas {
+  background: #eee;
+  /* height:50vh; */
+}
+#canvas-wrapper{
+  /* max-width:480px; */
+  z-index: -1;
+  margin-bottom: 300px;
+  /* margin:0 auto; */
+  position: relative;
+
+
+}
+.canvas-responsive{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* transform: translate(0,-50%); */
+
+  /* width:100%; */
+  /* z-index: 900; */
+
+}
+
+.button {
+  display: none;
+  vertical-align: middle;
+  text-align:center;
+  margin:32px;
+}
+
+.button div {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.button div:hover .left{
+  border: 0.5em solid #e74c3c;
+}
+.button div:hover .right{
+  border: 0.5em solid #e74c3c;
+}
+.button div:hover .left:after{
+  border-top: 0.5em solid #e74c3c;
+  border-right: 0.5em solid #e74c3c;
+}
+.button div:hover .right:after {
+  border-top: 0.5em solid #e74c3c;
+  border-right: 0.5em solid #e74c3c;
+}
+
+.left {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin-right: 1.5em;
+}
+
+.left:after {
+  content: '';
+  display: inline-block;
+  margin-top: 1.05em;
+  margin-left: 0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.right {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin-left: 1.5em;
+}
+#rightButton{
+  float: right;
+}
+#leftButton{
+  float: left;
+}
+
+.right:after {
+  content: '';
+  display: inline-block;
+  margin-top: 1.05em;
+  margin-left: -0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media (max-width:480px){
+  .button {
+      display: inline-block;
+      vertical-align: middle;
+      text-align:center;
+      margin:32px;
+  }
+}
+
+
+/* ここまでミニゲーム */
