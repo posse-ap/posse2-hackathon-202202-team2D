@@ -201,8 +201,18 @@ span:not([class]){
 }
 /* ここまで概要 */
 
-h1{
-  text-align:center;
+
+.wrapper{
+  width: 100%;
+}
+.ex{
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+.howto{
+  width: 100%;
+  text-align: center;
 }
 canvas {
   background: #eee;
@@ -226,7 +236,6 @@ canvas {
 
   /* width:100%; */
   /* z-index: 900; */
-
 }
 
 .button {
