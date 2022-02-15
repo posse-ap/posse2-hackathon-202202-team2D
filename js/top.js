@@ -85,6 +85,25 @@ $(function () {
 });
 
 
+var startPos = 0, winScrollTop = 0;
+// scrollイベントを設定
+window.addEventListener('scroll', function () {
+    winScrollTop = this.scrollY;
+    if (winScrollTop >= startPos) {
+        // 下にスクロールされた時
+        if (winScrollTop >= 400) {
+            // 下に200pxスクロールされたら隠す
+            document.getElementById('entryButton').classList.add('hide');
+        }
+    } else if (winScrollTop <= 400){
+        // 上にスクロールされた時
+        document.getElementById('entryButton').classList.remove('hide');
+    }
+    startPos = winScrollTop;
+});
+
+
+
 $('.catch_text span').addClass('fadeUp');
 $('.catch_text_normal p').addClass('fadeUp');
 // $('.catch_text').addClass('fadeUp');
@@ -98,10 +117,10 @@ $('.catch_text_normal p').addClass('fadeUp');
 //         var scroll = $(window).scrollTop();
 //         var windowHeight = $(window).height();
 //                 console.log($(this).scrollTop());
-//         if (scroll > elementTop - windowHeight -1000){
+//         if (scroll > elementTop - windowHeight +300){
 //           $(this).addClass('scrollin');
 //         }
-//       });
+//       }); 
 //     });
 //   });
 
@@ -132,10 +151,39 @@ function slideAnime() {
     slideAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面をスクロールをしたら動かしたい場合の記述
 
+
+function slideAnime2() {
+  //====下に動くアニメーションここから===
+
+    $('.fadeDown').each(function(){
+            var elemPos = $(this).offset().top+10;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight){
+            // 下から上へ表示するクラスを付与
+            // テキスト要素を挟む親要素（下）とテキスト要素を元位置でアニメーションをおこなう
+            $(this).addClass("slideAnimeDownUp");
+            // 要素を下枠外に移動しCSS アニメーションで下から元の位置に移動
+            $(this).children(".fadeUp span").addClass("slideAnimeUpDown");
+            // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+            }else{
+            // 下から上へ表示するクラスを取り除く
+            $(this).removeClass("slideAnimeDownUp");
+            $(this).children(".fadeUp span").removeClass("slideAnimeUpDown");
+            }
+        });
+  }
+  
+  // 画面をスクロールをしたら動かしたい場合の記述
+  $(window).scroll(function (){
+    slideAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
 // 画面切り替えアニメーション
 for (let i = 1; i < 4; i++) {
   $(function () {
     var setImg = '.change-img'+ i +'';
+    // var setImg = '.change-img1';
     var fadeSpeed = 2000;
     var switchDelay = 3000;
 
@@ -204,20 +252,20 @@ jQuery(function () {
         appear = true;
         pagetop.stop().animate({
           'bottom': '20vw' //下から100pxの位置に
-        }, 400); //0.3秒かけて現れる
+        }, 600); //0.3秒かけて現れる
         goForm.stop().animate({
           'bottom': '1vw' //下から100pxの位置に
-        }, 400); //0.3秒かけて現れる
+        }, 600); //0.3秒かけて現れる
       }
     } else {
       if (appear) {
         appear = false;
         pagetop.stop().animate({
-          'bottom': '-10vw' //下から-100pxの位置に
-        }, 300); //0.3秒かけて隠れる
+          'bottom': '-20vw' //下から-100pxの位置に
+        }, 600); //0.3秒かけて隠れる
         goForm.stop().animate({
-          'bottom': '-25vw' //下から-100pxの位置に
-        }, 300); //0.3秒かけて隠れる
+          'bottom': '-30vw' //下から-100pxの位置に
+        }, 600); //0.3秒かけて隠れる
       }
     }
   });
