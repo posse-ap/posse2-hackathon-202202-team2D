@@ -104,6 +104,7 @@ body {
     }
 
     .entry_button {
+
         font-weight: bold;
     }
 }
@@ -143,12 +144,17 @@ body {
 
 .entry_button {
     text-decoration: none;
-    width: 11vw;
+    width: 10vw;
     padding: 0 1vw;
     color: #ff9933;
     background-color: white;
     border: 3px solid #ff9933;
     transition-duration: 1s;
+    text-align: center;
+}
+
+.hide{
+	transform: translateY(-30vw); /* 上に消えるようにする */
 }
 
 .entry_button:hover {
@@ -189,13 +195,22 @@ body {
 } */
 
 @media screen and (max-width:530px) {
+
+    #header {
+        justify-content: space-around;
+        height: 50px;
+    }
+
+    /* .toggle_btn {
+        right: 15px !important;
+    } */
     
     .site_title img {
         width:170px;
     }
     
     .right_header {
-        margin-left: 15vw;
+        margin-left: 15px;
     }
 
     .entry_button {
@@ -206,7 +221,7 @@ body {
     }
 
     .entry_button span{
-        font-size: 2vw;
+        font-size: 2.2vw;
     }
 
     #navi span {
@@ -215,14 +230,19 @@ body {
 }
 
 @media screen and (max-width:400px) {
+
+        #header {
+        justify-content: space-around;
+        height: 40px;
+    }
     
     .site_title img {
-        width:140px;
+        width:100px;
     }
     
-    .right_header {
+    /* .right_header {
         margin-left: 15vw;
-    }
+    } */
 
     .entry_button {
         width: 15vw;
@@ -528,8 +548,111 @@ body {
 .main_container {
     /* margin: 50px; */
     width: 100%;
+    position: relative;
     /* height: 800px; */
 }
+
+/* About画像切り替え */
+.change-img1 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 6%;
+    right: 15%;
+    /* border-radius: 50%; */
+}
+
+.change-img1 img {
+    position: absolute;
+
+    /* transform: rotate(-30deg); */
+    object-fit: cover;
+    top: 0%;
+    left: 0%;
+    /* transform: rotate(-50%, -50%); */
+}
+
+/* About画像切り替え */
+.change-img2 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 18%;
+    left: 2%;
+    /* border-radius: 50%; */
+}
+
+.change-img2 img {
+    position: absolute;
+
+    /* transform: rotate(-30deg); */
+    object-fit: cover;
+    top: 0%;
+    left: 0%;
+    /* transform: rotate(-50%, -50%); */
+}
+
+/* About画像切り替え */
+.change-img3 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 26%;
+    right: 17%;
+    /* border-radius: 50%; */
+}
+
+.change-img3 img {
+    position: absolute;
+
+    /* transform: rotate(-30deg); */
+    object-fit: cover;
+    top: 0%;
+    left: 0%;
+    /* transform: rotate(-50%, -50%); */
+}
+
+@media screen and (max-width:640px) {
+
+/* About画像切り替え */
+.change-img1 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 6.5%;
+    right: 3%;
+    /* border-radius: 50%; */
+}
+
+/* About画像切り替え */
+.change-img2 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 27%;
+    right: 3%;
+    /* border-radius: 50%; */
+}
+
+/* About画像切り替え */
+.change-img3 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 33%;
+    right: 3%;
+    /* border-radius: 50%; */
+}
+
+}
+
+
 
 /*************** 文字全体部分 ***************//***************  ***************/
 .catch_texts {
@@ -722,40 +845,29 @@ width: 75vw;
 
 /* LINEの右下固定追加 */
 .goForm {
-    font-size:2vw;
+  font-size:1.8vw;
   position: fixed;
   text-decoration: none;
   right: 5px;
-  bottom: -150px;
+  bottom: -25vw;
   z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgb(8, 136, 8);
-  width: 13vw;
-  height: 13vw;
+  background: #ff9933;
+  width: 12vw;
+  height: 12vw;
   /* border-radius: 100%; */
-  margin: 10px;
+  margin: 8px;
   color: #fff;
   text-align: center;
   line-height: 1.3;
   font-weight: bold;
-  border: 0.3vw solid #fcfafa;
-  /* animation-name: fuwa; */
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-duration: 1s;
+  border: 0.3vw solid #fcfafa;  
 }
 
-@keyframes fuwa {
-  0% {
-    transform: translate(0, 0px);
-  }
-  100% {
-    transform: translate(0, -5px);
-  }
-}
+
 
 /* トップへ戻る */
 #page_top{
@@ -763,7 +875,7 @@ width: 75vw;
   height: 4vw;
   position: fixed;
   right: 10px;
-  bottom: -80px;
+  bottom: -20vw;
   background: #4c4c4c;
   opacity: 0.6;
   border-radius: 50%;
@@ -786,7 +898,7 @@ width: 75vw;
   position: absolute;
   width: 3vw;
   height: 3vw;
-      top: 10%;
+    top: 10%;
   left:13%;
   /* transform: translate(-50%, -50%); */
   margin: auto;
@@ -799,7 +911,7 @@ width: 75vw;
 .goForm {
   font-size: 13px;
   right: 5px;
-  bottom: -150px;
+  bottom: -25vw;
   z-index: 99;
   width: 13vw;
   height: 13vw;
@@ -817,7 +929,7 @@ width: 75vw;
   height: 5vw;
   position: fixed;
   right: 10px;
-  bottom: -80px;
+  /* bottom: -80px; */
   background: #4c4c4c;
   opacity: 0.6;
   border-radius: 50%;
@@ -935,7 +1047,7 @@ width: 75vw;
 /* 画像&テキストのセット */
 .body_unit {
     width: 100%;
-height: 50vw;
+height: 55vw;
   display: flex;
   justify-content: space-between;
   /* padding: 10vw 5vw 3vw; */
@@ -953,25 +1065,45 @@ height: 50vw;
 /* 画像自体 */
 .img_container img {
   width: 100%;
-  height: 50vw;
+  height: 55vw;
   object-fit: cover; 
   position: absolute;
 }
 
 /* About画像切り替え */
-.change-img1 {
+/* .change-img1 {
   overflow: hidden;
   position: relative;
-}
+} */
+
+/* 見出し＆文章部分 文章センター版 */
+
 
 /* 見出し＆文章部分 */
 .text_container {
 position: absolute;
-left:0;
 padding: 3vw;
   width: 40%;
   background-color: rgba(24, 182, 77, 0.6);
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", serif;
+}
+
+.text_container.center_text {
+left:50%;
+top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.center_text p span{
+
+    font-weight: bold;
+    background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
+
+}
+
+.left_text {
+left:0;
+
 }
 
 /* 見出し */
@@ -1046,6 +1178,12 @@ padding: 3vw;
   margin-bottom: 0.5em;
 }
 
+.text_container.center_text {
+left:50%;
+top: 47%;
+  transform: translate(-50%, -50%);
+}
+
 }
 
 @media screen and (max-width:700px) {
@@ -1053,6 +1191,23 @@ padding: 3vw;
    .heading {
   font-size: 4vw;
 }
+
+.text_container.center_text {
+left:50%;
+top:49%;
+  transform: translate(-50%, -50%);
+}
+
+}
+
+@media screen and (max-width:640px) {
+
+.text_container.center_text {
+left:50%;
+top:53%;
+  transform: translate(-50%, -50%);
+}
+
 }
 
 @media screen and (max-width:630px) {
@@ -1061,6 +1216,12 @@ padding: 3vw;
         width: 60%;
     }
 
+    .text_container.center_text {
+left:50%;
+top: 53%;
+  transform: translate(-50%, -50%);
+}
+
     .text_container p {
   font-size: 16px;
   line-height: 1.5;
@@ -1068,11 +1229,11 @@ padding: 3vw;
 
 /* 画像自体 */
 .img_container img {
-  height: 70vw;
+  height: 75vw;
 }
 
 .body_unit {
-    height: 70vw;
+    height: 75vw;
 }
 
    .heading {
@@ -1095,6 +1256,44 @@ padding: 3vw;
   font-size: 14px;
   line-height: 1.5;
 }
+
+.text_container.center_text {
+position: absolute;
+width: 95%;
+left:50%;
+top: 58%;
+  transform: translate(-50%, -50%);
+}
+}
+
+@media screen and (max-width:425px) {
+
+.text_container.center_text {
+left:50%;
+top:55%;
+  transform: translate(-50%, -50%);
+}
+
+}
+
+@media screen and (max-width:380px) {
+
+.text_container.center_text {
+left:50%;
+top:61%;
+  transform: translate(-50%, -50%);
+}
+
+}
+
+@media screen and (max-width:340px) {
+
+.text_container.center_text {
+left:50%;
+top:63%;
+  transform: translate(-50%, -50%);
+}
+
 }
 
 /* フェードアップアニメーション */
