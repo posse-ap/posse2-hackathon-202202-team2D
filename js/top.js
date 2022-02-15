@@ -145,3 +145,14 @@ $('.catch_text').addClass('fadeUp');
 //     });
 //   });
 // });
+
+// //ページトップへ戻る
+// jQuery(function () {
+//   var appear = false;
+//   var pageTop = $('#footer-top-page-button');
+
+//   pageTop.click(function () {
+//     $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+//     return false;
+//   });
+// });
