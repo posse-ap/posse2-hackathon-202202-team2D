@@ -1,9 +1,76 @@
 
 
+.interview_title{
+    font-size: 3rem;
+    margin: 3em;
 
+}
+.q{
+    width: 60%;
+    height: 60%;
+    margin-left: 6vw;
+    margin-bottom: 3rem;
+}
+.who_q{
+    font-size: 1rem;
+    color: gray;
+}
+.img_wrapper_q{
+    /* width: 100px; */
+    /* height: 100px; */
+    display: flex;
 
-.questioner .answerer{
-    width: 50px;
+}
+.img{
+    width: 97px;
+    height: 97px;
     /* min-width: 100px; */
     border-radius: 50%;
+    border: 3px solid gray;
+}
+.question{
+    margin-top: 1rem;
+    width:100vw;
+}
+
+.a{
+    width: 60%;
+    height: 60%;
+    margin-left: 20vw;
+    margin-bottom: 3rem;
+}
+.who_a{
+    font-size: 1rem;
+    text-align: right;
+
+}
+.who_a:nth-of-type(1){
+    color: red;
+}
+.who_a:nth-of-type(2){
+    color: green;
+}
+.who_a:nth-of-type(3){
+    color: blue;
+}
+
+.img_wrapper_a{
+    display: flex;
+
+}
+
+.answer{
+    margin-top: 1rem;
+    width:100vw;
+    text-align:  right;
+}
+
+
+@media screen and (max-width:800px) {
+    .img{
+        width: 50px;
+        height: 50px;
+        /* min-width: 100px; */
+        border-radius: 50%;
+    }
 }
