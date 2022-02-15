@@ -1284,3 +1284,72 @@ padding: 3vw;
 .fotter_menu_wrapper {
   text-align: center;
 }
+
+
+/* Quote Generator */
+.wrapper {
+  width: auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 30px 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+header, .content :where(span) {
+  color: #202842;
+}
+
+.wrapper header {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper .content {
+  margin: 35px 0;
+}
+
+.content .img_area {
+  display: flex;
+  justify-content: center;
+}
+
+.content .event {
+  display: flex;
+  font-size: 18px;
+  margin-top: 20px;
+  font-style: italic;
+  justify-content: flex-end;
+}
+
+.author span:first-child {
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+
+.wrapper .buttons {
+  border-top: 1px solid #ccc;
+}
+
+.buttons .features {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons button {
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 22px;
+  border-radius: 30px;
+  background: #5372F0;
+}
+
+.buttons button.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
