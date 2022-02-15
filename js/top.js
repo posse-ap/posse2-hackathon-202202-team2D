@@ -2,7 +2,7 @@
 
 
 //logoの表示
-$(window).on('load',function(){
+$(window).on('load', function () {
   $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1秒（1000ms）待機してからフェードアウト
   $("#splash_logo").delay(900).fadeOut('slow');//ロゴを0.9秒（900ms）待機してからフェードアウト
 });
@@ -55,12 +55,12 @@ $(".toggle_btn").click(function () {
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
-$(function(){
+$(function () {
   /*=================================================
   ハンバーガーメニュー
   ===================================================*/
   // ハンバーガーメニューのクリックイベント
-  $('.toggle_btn').on('click', function() {
+  $('.toggle_btn').on('click', function () {
     // #headerにopenクラスが存在する場合
     if ($('#header').hasClass('open')) {
       // openクラスを削除
@@ -68,7 +68,7 @@ $(function(){
       // メニューが非表示になる
       $('#header').removeClass('open');
 
-    // #headerにopenクラスが存在しない場合
+      // #headerにopenクラスが存在しない場合
     } else {
       // openクラスを追加
       // openクラスを追加すると、openクラスのCSSが適応されるため、
@@ -78,39 +78,38 @@ $(function(){
   });
 
   // メニューが表示されている時に画面をクリックした場合
-  $('#mask').on('click', function() {
+  $('#mask').on('click', function () {
     // openクラスを削除して、メニューを閉じる
     $('#header').removeClass('open');
   });
 });
 
 
-$('.catch_text').addClass('fadeUp');
+$('.catch_text span').addClass('fadeUp');
+$('.catch_text_normal p').addClass('fadeUp');
 // $('.catch_text').addClass('fadeUp');
 // $('.catch_texts').addClass('fadeUp');
 
 
 // $(function(){
 //     $(window).scroll(function (){
-//       $('fadeup').each(function(){
-//                 console.log('a');
+//       $('fade_down').each(function(){
 //         var elementTop = $(this).offset().top;
 //         var scroll = $(window).scrollTop();
 //         var windowHeight = $(window).height();
 //                 console.log($(this).scrollTop());
-
-//         console.log('elementTop - windowHeight');
-//         if (scroll > elementTop - windowHeight -100){
+//         if (scroll > elementTop - windowHeight -1000){
 //           $(this).addClass('scrollin');
 //         }
 //       });
 //     });
 //   });
 
-function slideAnime(){
+function slideAnime() {
   //====下に動くアニメーションここから===
+
     $('.fadeUp').each(function(){
-            var elemPos = $(this).offset().top-70;
+            var elemPos = $(this).offset().top+10;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
             if (scroll >= elemPos - windowHeight){
@@ -132,6 +131,22 @@ function slideAnime(){
   $(window).scroll(function (){
     slideAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// 画面切り替えアニメーション
+for (let i = 1; i < 4; i++) {
+  $(function () {
+    var setImg = '.change-img'+ i +'';
+    var fadeSpeed = 2000;
+    var switchDelay = 3000;
+
+    $(setImg).children('img').css({ opacity: '0' });
+    $(setImg + ' img:first').stop().animate({ opacity: '1', zIndex: '20' }, fadeSpeed);
+
+    setInterval(function () {
+        $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
+    }, switchDelay);
+});
+}
 
 
 //   });
@@ -178,35 +193,86 @@ function slideAnime(){
 //   });
 // });
 
+
 jQuery(function () {
-    var appear = false;
-    var pagetop = $('#page_top');
-    var goForm = $('.goForm');
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 400) {  //400pxスクロールしたら
-            if (appear == false) {
-                appear = true;
-                pagetop.stop().animate({
-                    'bottom': '20vw' //下から100pxの位置に
-                }, 400); //0.3秒かけて現れる
-                goForm.stop().animate({
-                    'bottom': '1vw' //下から100pxの位置に
-                }, 400); //0.3秒かけて現れる
-            }
-        } else {
-            if (appear) {
-                appear = false;
-                pagetop.stop().animate({
-                    'bottom': '-10vw' //下から-100pxの位置に
-                }, 300); //0.3秒かけて隠れる
-                goForm.stop().animate({
-                    'bottom': '-25vw' //下から-100pxの位置に
-                }, 300); //0.3秒かけて隠れる
-            }
-        }
-    });
-    pagetop.click(function () {
-        $('body, html').animate({ scrollTop: 0 }, 300); //0.5秒かけてトップへ戻る
-        return false;
-    });
+  var appear = false;
+  var pagetop = $('#page_top');
+  var goForm = $('.goForm');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 400) {  //400pxスクロールしたら
+      if (appear == false) {
+        appear = true;
+        pagetop.stop().animate({
+          'bottom': '20vw' //下から100pxの位置に
+        }, 400); //0.3秒かけて現れる
+        goForm.stop().animate({
+          'bottom': '1vw' //下から100pxの位置に
+        }, 400); //0.3秒かけて現れる
+      }
+    } else {
+      if (appear) {
+        appear = false;
+        pagetop.stop().animate({
+          'bottom': '-10vw' //下から-100pxの位置に
+        }, 300); //0.3秒かけて隠れる
+        goForm.stop().animate({
+          'bottom': '-25vw' //下から-100pxの位置に
+        }, 300); //0.3秒かけて隠れる
+      }
+    }
+  });
+  pagetop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 300); //0.5秒かけてトップへ戻る
+    return false;
+  });
 });
+
+// Quote Generator
+
+var picture =[
+  '../img/eventphoto1',
+  '../img/eventphoto2',
+  '../img/eventphoto3',
+  '../img/eventphoto4',
+  '../img/eventphoto5',
+  '../img/eventphoto6',
+]
+
+var eventName = [
+  'eventName1',
+  'eventName2',
+  'eventName3',
+  'eventName4',
+  'eventName5',
+  'eventName6',
+] 
+
+let quote = document.getElementById('quote');
+
+quote.insertAdjacentHTML("beforeend",
+  `<div class="wrapper">`
+  + `<header>POSSE②の日常</header>`
+  + `<div class="content">`
+  + `<div class="img_area">`
+  + `<div><img src="${picture[r]}" alt=""></div>`
+  + `</div>`
+  + `</div>`
+  + `<div class="event">`
+  + `<span>__</span>`
+  + `<span class="name">${eventName[r]}</span>`
+  + `</div>`
+  + `</div>`
+  + `<div class="buttons">`
+  + `<div class="features">`
+  + `<div>`
+  + `<a href="">POSSE②の歴史って？</a>`
+  + `</div>`
+  + `<button>New Photo</button>`
+  + `</div>`
+  + `</div>`
+);
+
+const button = document.querySelector("button");
+
+button.addEventListener("click",function(){
+})
