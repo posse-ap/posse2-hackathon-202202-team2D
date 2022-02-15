@@ -1,8 +1,9 @@
 /* PCサイズ */
 @media screen and (min-width: 480px){
 * { 
-    padding: 0;
-     margin: 0;
+    /* padding: 0;
+     margin: 0; */
+     /* background-color: aqua; */
 }
 /* @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css); */
 .tiles {
@@ -31,9 +32,11 @@ padding: 30px 0 0;
   overflow: hidden;
   position: relative;
   border-radius: 3px;
-  box-shadow: 0 0 20px 0 snow;
+  /* box-shadow: 0 0 20px 0 snow; */
       transition:1s all;
-
+}
+.tile{
+  margin: 1vw;
 }
 .tiles .tile:before {
   content: "";
@@ -62,11 +65,12 @@ padding: 30px 0 0;
     /* transition:1s all; */
 }
 span{
-  color: snow;}
+  color: snow;
+}
 .tiles .tile:hover {
     /* transform:scale(1.1,1.1); */
 
-    box-shadow: 5px 5px 5px 5px snow, -5px -5px 5px 5px snow;
+    /* box-shadow: 5px 5px 5px 5px snow, -5px -5px 5px 5px snow; */
     transition:1s all;
 }
 
@@ -99,14 +103,16 @@ span{
   font-size: 12px;
 }
 .tiles .tile:focus:before,
-.tiles .tile:focus span, .tiles .tile:hover:before,
+.tiles .tile:focus span,
+.tiles .tile:hover:before,
 .tiles .tile:hover span {
   opacity: 1;
 }
 .tiles .tile:focus:before, .tiles .tile:hover:before {
   top: 50%;
 }
-.tiles .tile:focus span, .tiles .tile:hover span {
+.tiles .tile:focus span,
+.tiles .tile:hover span {
   top: 0;
 }
 .tiles .tile:focus .title, .tiles .tile:hover .title {
@@ -117,11 +123,11 @@ span{
 }
 
 
-canvas { 
+/* canvas { 
     background: black;
      display: block;
       margin: 0 auto;
-}
+} */
 
 }
 
@@ -135,3 +141,121 @@ canvas {
 
 
 }
+/* ここまで概要 */
+
+h1{
+  text-align:center;
+}
+canvas {
+  background: #eee;
+  /* height:50vh; */
+}
+#canvas-wrapper{
+  /* max-width:480px; */
+  /* margin:0 auto; */
+  position: relative;
+  margin: 10vh;
+
+}
+.canvas-responsive{
+  width: 90vw;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  /* margin:0 auto; */
+  /* width:100%; */
+  /* z-index: 900; */
+
+}
+
+.button {
+  display: none;
+  vertical-align: middle;
+  text-align:center;
+  margin:32px;
+}
+
+.button div {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.button div:hover .left{
+  border: 0.5em solid #e74c3c;
+}
+.button div:hover .right{
+  border: 0.5em solid #e74c3c;
+}
+.button div:hover .left:after{
+  border-top: 0.5em solid #e74c3c;
+  border-right: 0.5em solid #e74c3c;
+}
+.button div:hover .right:after {
+  border-top: 0.5em solid #e74c3c;
+  border-right: 0.5em solid #e74c3c;
+}
+
+.left {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin-right: 1.5em;
+}
+
+.left:after {
+  content: '';
+  display: inline-block;
+  margin-top: 1.05em;
+  margin-left: 0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.right {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #333;
+  border-radius: 50%;
+  margin-left: 1.5em;
+}
+#rightButton{
+  float: right;
+}
+#leftButton{
+  float: left;
+}
+
+.right:after {
+  content: '';
+  display: inline-block;
+  margin-top: 1.05em;
+  margin-left: -0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media (max-width:480px){
+  .button {
+      display: inline-block;
+      vertical-align: middle;
+      text-align:center;
+      margin:32px;
+  }
+}
+
+
+/* ここまでミニゲーム */
