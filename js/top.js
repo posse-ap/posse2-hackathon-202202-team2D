@@ -286,10 +286,14 @@ const square =[
 
 const oblong = [
   '../img/oblong0.jpg',
+  '../img/oblong1.jpg',
+  '../img/oblong2.jpg',
+  '../img/oblong3.jpg',
 ]
 const vertical =[
   '../img/vertical0.jpg',
   '../img/vertical1.jpg',
+  '../img/vertical2.jpg',
 ]
 
 // let quote = document.getElementById('quote');

@@ -386,7 +386,7 @@ body {
 /* ファーストビュー画像 */
 .first_view img {
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   /* filter: blur(4px); */
 }
 
@@ -475,7 +475,7 @@ body {
 	z-index: 1;
 	/* 任意の値 */
 	background: #3c8d5b;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 .passing .passing_txt {
     height: 100%;
@@ -495,18 +495,18 @@ body {
 	font-size: 6.5vw;
 	font-weight: bold;
 	line-height: 1.5;
-    color: #0D8037;
+    color: white;
 }
 
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
 
 .passing.move .passing_bar:before {
-	-webkit-animation: passing_bar 1s ease 2s 1.5 normal forwards;
-	animation: passing_bar 1s ease 2s 1.5 normal forwards;
+	-webkit-animation: passing_bar 1.2s ease 0.5s 1.5 normal forwards;
+	animation: passing_bar 1.2s ease 0.5s 1.5 normal forwards;
 }
 .passing.move .passing_txt {
-	-webkit-animation: passing_txt 1.5s ease 2s 1 normal forwards;
-	animation:passing_txt 1.5s ease 2s 1 normal forwards;  
+	-webkit-animation: passing_txt 1s ease 0.3s 1 normal forwards;
+	animation:passing_txt 1s ease 0.3s 1 normal forwards;  
 }
 
 
@@ -1316,9 +1316,10 @@ top:63%;
 /*////////////*　ふったー ////////////////*/
 
 .footer {
-  background-color: rgb(8, 165, 66);
-  height: 400px;
+  background-color: rgb(20, 165, 66);
+  height: 470px;
   width: 100%;
+
 }
 
 .footer_wrapper {
@@ -1492,6 +1493,7 @@ top:63%;
   background: #fff;
   border-radius: 15px;
   padding: 30px 30px 25px;
+  margin-bottom: 7vw;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -1501,9 +1503,6 @@ top:63%;
   text-align: center;
 }
 
-.quote_wrapper {
-  margin: 35px 0;
-}
 
 .content .img_area {
   display: flex;
@@ -1553,6 +1552,7 @@ top:63%;
 }
 
 .buttons .features {
+  margin-top: 3vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1566,7 +1566,7 @@ top:63%;
   cursor: pointer;
   padding: 13px 22px;
   border-radius: 30px;
-  background: #5372F0;
+  background: rgb(20, 165, 66);;
   margin: 0 auto;
 }
 
