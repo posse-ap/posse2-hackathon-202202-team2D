@@ -30,13 +30,13 @@ padding: 30px 0 0;
   left: 0;
   right: 0;
   margin: 6rem auto;
-
+  font-weight: bolder;
 }
-.rotateX{
+/* .rotateX{
   animation-name:rotateXAnime;
   animation-duration:1.7s;
   animation-fill-mode:forwards;
-}
+} */
 
 @keyframes rotateXAnime{
   from{
@@ -214,8 +214,7 @@ canvas {
   margin-bottom: 300px;
   /* margin:0 auto; */
   position: relative;
-
-
+  padding-bottom: 20px;
 }
 .canvas-responsive{
   position: absolute;

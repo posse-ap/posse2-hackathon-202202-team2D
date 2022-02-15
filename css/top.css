@@ -388,7 +388,7 @@ body {
 /* ファーストビュー画像 */
 .first_view img {
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   /* filter: blur(4px); */
 }
 
@@ -477,7 +477,7 @@ body {
 	z-index: 1;
 	/* 任意の値 */
 	background: #3c8d5b;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 .passing .passing_txt {
     height: 100%;
@@ -497,18 +497,18 @@ body {
 	font-size: 6.5vw;
 	font-weight: bold;
 	line-height: 1.5;
-    color: #0D8037;
+    color: white;
 }
 
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
 
 .passing.move .passing_bar:before {
-	-webkit-animation: passing_bar 1s ease 2s 1.5 normal forwards;
-	animation: passing_bar 1s ease 2s 1.5 normal forwards;
+	-webkit-animation: passing_bar 1.2s ease 0.5s 1.5 normal forwards;
+	animation: passing_bar 1.2s ease 0.5s 1.5 normal forwards;
 }
 .passing.move .passing_txt {
-	-webkit-animation: passing_txt 1.5s ease 2s 1 normal forwards;
-	animation:passing_txt 1.5s ease 2s 1 normal forwards;  
+	-webkit-animation: passing_txt 1s ease 0.3s 1 normal forwards;
+	animation:passing_txt 1s ease 0.3s 1 normal forwards;  
 }
 
 
@@ -560,7 +560,7 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 4%;
+      top: 6%;
     right: 15%;
     /* border-radius: 50%; */
 }
@@ -581,7 +581,7 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 15%;
+      top: 18%;
     left: 2%;
     /* border-radius: 50%; */
 }
@@ -602,7 +602,7 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 20%;
+      top: 26%;
     right: 17%;
     /* border-radius: 50%; */
 }
@@ -914,13 +914,6 @@ font-family: 'Noto Sans JP', sans-serif;
 
 
 
-
-
-
-
-
-
-
 /* フッターの指定 */
 
 /* LINEの右下固定追加 */
@@ -1172,12 +1165,13 @@ font-family: 'Noto Sans JP', sans-serif;
 
 .text_container.center_text {
 left:50%;
-top: 35%;
+top: 45%;
   transform: translate(-50%, -50%);
 }
 
 .center_text p span{
-    font-weight: 900;
+
+    font-weight: bold;
     background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
 
 }
@@ -1237,13 +1231,6 @@ left:0;
   font-size: 2vw;
   line-height: 1.8;
 }
-
-.text_container.center_text {
-left:50%;
-top: 36%;
-  transform: translate(-50%, -50%);
-}
-
 }
 
 @media screen and (max-width:800px) {
@@ -1267,7 +1254,9 @@ top: 36%;
 }
 
 .text_container.center_text {
-    top: 36%;
+left:50%;
+top: 47%;
+  transform: translate(-50%, -50%);
 }
 
 }
@@ -1279,7 +1268,8 @@ top: 36%;
 }
 
 .text_container.center_text {
-top:36%;
+left:50%;
+top:49%;
   transform: translate(-50%, -50%);
 }
 
@@ -1289,7 +1279,7 @@ top:36%;
 
 .text_container.center_text {
 left:50%;
-top:41%;
+top:53%;
   transform: translate(-50%, -50%);
 }
 
@@ -1303,7 +1293,7 @@ top:41%;
 
     .text_container.center_text {
 left:50%;
-top: 41%;
+top: 53%;
   transform: translate(-50%, -50%);
 }
 
@@ -1345,7 +1335,8 @@ top: 41%;
 .text_container.center_text {
 position: absolute;
 width: 95%;
-top: 43%;
+left:50%;
+top: 58%;
   transform: translate(-50%, -50%);
 }
 }
@@ -1354,7 +1345,7 @@ top: 43%;
 
 .text_container.center_text {
 left:50%;
-top:46%;
+top:55%;
   transform: translate(-50%, -50%);
 }
 
@@ -1364,7 +1355,7 @@ top:46%;
 
 .text_container.center_text {
 left:50%;
-top:50%;
+top:61%;
   transform: translate(-50%, -50%);
 }
 
@@ -1374,7 +1365,7 @@ top:50%;
 
 .text_container.center_text {
 left:50%;
-top:53.5%;
+top:63%;
   transform: translate(-50%, -50%);
 }
 
@@ -1400,9 +1391,10 @@ top:53.5%;
 /*////////////*　ふったー ////////////////*/
 
 .footer {
-  background-color: rgb(8, 165, 66);
-  height: 400px;
+  background-color: rgb(20, 165, 66);
+  height: 470px;
   width: 100%;
+
 }
 
 .footer_wrapper {
@@ -1572,10 +1564,11 @@ top:53.5%;
 /* Quote Generator */
 .quote_wrapper {
   width: auto;
-  height: 600px;
+  height: 450px;
   background: #fff;
   border-radius: 15px;
   padding: 30px 30px 25px;
+  margin-bottom: 7vw;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -1585,9 +1578,6 @@ top:53.5%;
   text-align: center;
 }
 
-.quote_wrapper {
-  margin: 35px 0;
-}
 
 .content .img_area {
   display: flex;
@@ -1595,30 +1585,35 @@ top:53.5%;
   position: relative;
 }
 
-.square_img {
+.square {
   position: absolute;
-  width: 20em;
+  width: 15em;
   height: auto;
-  top: 0;
-  right: 28em;
+  top: 6em;
+  right: 27em;
 }
 
-.oblong_img {
+.oblong {
   position: absolute;
   width: 25em;
   height: auto;
-  top: 7em;
-  right: 45em;
+  top: -0.5em;
+  right: 43em;
 }
 
-.vertical_img {
+.vertical {
   position: absolute;
-  height: 30em;
-  width: auto;
-  top: 4em;
-  right: 10em;
+  width: 15em;
+  height: auto;
+  top: 0em;
+  right: 11em;
 }
 
+.quote_img {
+  width: 30%;
+  height: auto;
+}
+ 
 .content {
   display: flex;
   font-size: 18px;
@@ -1632,8 +1627,8 @@ top:53.5%;
 }
 
 .buttons .features {
+  margin-top: 3vw;
   display: flex;
-  margin-top: 20px;
   align-items: center;
   justify-content: space-between;
 }
@@ -1646,7 +1641,7 @@ top:53.5%;
   cursor: pointer;
   padding: 13px 22px;
   border-radius: 30px;
-  background: #5372F0;
+  background: rgb(20, 165, 66);;
   margin: 0 auto;
 }
 
