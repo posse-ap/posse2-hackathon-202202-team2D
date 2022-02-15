@@ -676,3 +676,27 @@ display: block;
   height: auto;
   background-color: white;
 }
+
+.fotter_menu_contents {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.fotter_menu_contents:hover {
+	color: white;
+}
+
+.fotter_menu {
+  display: inline-block;
+  padding: 10px 15px 0px;
+}
+
+.fotter_menu_container {
+  width: 100%;
+  height: auto;
+}
+
+.fotter_menu_wrapper {
+  text-align: center;
+}
