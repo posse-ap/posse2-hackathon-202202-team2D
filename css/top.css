@@ -1287,34 +1287,56 @@ padding: 3vw;
 
 
 /* Quote Generator */
-.wrapper {
+.quote_wrapper {
   width: auto;
+  height: 600px;
   background: #fff;
   border-radius: 15px;
   padding: 30px 30px 25px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
 
-header, .content :where(span) {
-  color: #202842;
-}
-
-.wrapper header {
+.quote_wrapper header {
   font-size: 35px;
   font-weight: 600;
   text-align: center;
 }
 
-.wrapper .content {
+.quote_wrapper {
   margin: 35px 0;
 }
 
 .content .img_area {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.content .event {
+.square_img {
+  position: absolute;
+  width: 20em;
+  height: auto;
+  top: 0;
+  right: 28em;
+}
+
+.oblong_img {
+  position: absolute;
+  width: 25em;
+  height: auto;
+  top: 7em;
+  right: 45em;
+}
+
+.vertical_img {
+  position: absolute;
+  height: 30em;
+  width: auto;
+  top: 4em;
+  right: 10em;
+}
+
+.content {
   display: flex;
   font-size: 18px;
   margin-top: 20px;
@@ -1322,13 +1344,8 @@ header, .content :where(span) {
   justify-content: flex-end;
 }
 
-.author span:first-child {
-  margin: -7px 5px 0 0;
-  font-family: monospace;
-}
-
-.wrapper .buttons {
-  border-top: 1px solid #ccc;
+.quote_wrapper .buttons {
+  border-bottom: 1px solid #ccc;
 }
 
 .buttons .features {
@@ -1347,6 +1364,7 @@ header, .content :where(span) {
   padding: 13px 22px;
   border-radius: 30px;
   background: #5372F0;
+  margin: 0 auto;
 }
 
 .buttons button.loading {
