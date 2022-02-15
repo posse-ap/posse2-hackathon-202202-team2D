@@ -543,3 +543,158 @@ display: block;
     opacity : 1;
     transform : translate(0, 0);
 }
+
+/* フッターの指定 */
+
+.footer {
+  background-color: rgb(8, 165, 66);
+  height: 650px;
+  width: 100%;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 文字とSNSのアイコンを含む箱 */
+
+.footer_sns_box {
+  margin: 0 auto;
+}
+
+/* SNSのアイコン3つ */
+
+.footer_sns_link {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+}
+
+/* SNSのアイコン一つ? */
+
+.footer_sns_link li {
+  margin: 0px 10px;
+}
+
+/* posseのロゴが入った箱 */
+
+.footer_logo_wrapper {
+  background-color: none;
+  width: 300px;
+  height: auto;
+  margin: 30px auto 20px;
+}
+
+/* posseのロゴ画像 */
+
+.footer_logo_wrapper img {
+  width: 300px;
+  height: 100%;
+}
+
+/* POSSEマークホバーで色変化 */
+
+.footer_logo_wrapper img:hover {
+  opacity: 0.7;
+  transition: .5s;
+}
+
+/* 画像を覆うaタグ */
+
+.footer_logo_wrapper a {
+  display: block;
+  height: 100%;
+}
+
+/* snsで詳細を見るのテキスト */
+
+.footer_sns_text {
+  margin: 10px auto;
+  font-family: "TsukuARdGothic-Regular";
+}
+
+/* twitterのアイコン */
+
+.fa-twitter {
+  font-size: 40px;
+  color: rgb(65, 65, 65);
+}
+
+.fa-twitter:hover {
+  color: rgb(68, 161, 255);
+}
+
+/* インスタのアイコン */
+
+.fa-instagram {
+  font-size: 40px;
+  color: rgb(65, 65, 65);
+  margin-right: 7px;
+}
+
+.fa-instagram:hover {
+  color: rgb(228, 66, 29);
+}
+
+/* Lineのアイコンの色指定 */
+
+.fa-line {
+  font-size: 40px;
+  color: rgb(65, 65, 65);
+}
+
+.fa-line:hover {
+  color: rgb(126, 183, 28);
+}
+
+/* special thanksメッセージ */
+
+.footer_message {
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+  margin-top: 30px;
+  font-size: 25px;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/* トップページに戻るボタン */
+
+.footer-top-page-button {
+  color: white;
+  background: rgb(74, 74, 74);
+  width: 300px;
+  height: auto;
+  margin: 10px auto;
+  padding: 30px;
+}
+
+.footer-top-page-button:hover {
+  color: rgb(74, 74, 74);
+  background: white;
+  transition: .8s;
+}
+
+/* トップページに戻るボタンのテキスト */
+
+.footer-top-page-button-text {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* 製作者の名前 */
+
+.footer-editors {
+  font-size: 12px;
+  line-height: 30px;
+  margin-top: 50px;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/* footerのsns上の矢印 */
+
+.fa-arrow-circle-down {
+  color: rgb(74, 74, 74);
+}
