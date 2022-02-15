@@ -1,14 +1,31 @@
+function rotateXAnime(){
+  // ふわっ
+  $('.main_title').each(function(){ //fadeUpTriggerというクラス名が
+    var elemPos = $(this).offset().top-30;//要素より、50px上の
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+    $(this).addClass('rotateX');// 画面内に入ったらfadeUpというクラス名を追記
+    }else{
+    $(this).removeClass('rotateX');// 画面外に出たらfadeUpというクラス名を外す
+    }
+    });
+}
 
+
+$(window).scroll(function (){
+    rotateXAnime();
+});
         // canvas のレスポンシブ処理
-        function resize(){    
-          $(".canvas-responsive").outerHeight($(window).height()*2/3 -$(".canvas-responsive").offset().top- Math.abs($(".canvas-responsive").outerHeight(true) - $(".canvas-responsive").outerHeight()));
-        }
-        $(document).ready(function(){
-          resize();
-          $(window).on("resize", function(){                      
-              resize();
-          });
-        });
+        // function resize(){    
+        //   $(".canvas-responsive").outerHeight($(window).height()*2/3 -$(".canvas-responsive").offset().top- Math.abs($(".canvas-responsive").outerHeight(true) - $(".canvas-responsive").outerHeight()));
+        // }
+        // $(document).ready(function(){
+        //   resize();
+        //   $(window).on("resize", function(){                      
+        //       resize();
+        //   });
+        // });
         //outerHeight() 高さ取得、 .offset()  位置、　Math.abs() 絶対値、　
        
         var canvas = document.getElementById("myCanvas");
@@ -103,6 +120,7 @@
                   score++;
                   if(score == brickRowCount*brickColumnCount) {
                     // alert("やったね！");
+                    ctx.fillText("ゲームクリア！", 100,150);
                     // document.location.reload();
                     clearInterval(interval); // ゲーム再スタート
                   }
@@ -170,6 +188,7 @@
             }
             else {
             //   alert("まけ");
+            ctx.fillText("おしいね！", 110,150);
             //   document.location.reload();
              clearInterval(interval);
             }
