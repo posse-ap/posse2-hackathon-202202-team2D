@@ -558,7 +558,7 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 6%;
+      top: 4%;
     right: 15%;
     /* border-radius: 50%; */
 }
@@ -579,7 +579,7 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 18%;
+      top: 15%;
     left: 2%;
     /* border-radius: 50%; */
 }
@@ -600,7 +600,7 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 26%;
+      top: 20%;
     right: 17%;
     /* border-radius: 50%; */
 }
@@ -837,6 +837,80 @@ width: 75vw;
 }
 
 }
+
+.form_form {
+
+    width: 100vw;
+height: 55vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: space-between; */
+  /* padding: 10vw 5vw 3vw; */
+  padding-bottom: 4vw;
+  margin: 10vw auto 20vw;
+      /* background-color: green; */
+
+  position: relative;
+
+background-image: linear-gradient(rgba(16, 225, 55, 0.5), rgba(8, 255, 55, 0.5)),
+                  url("../img/nature.jpg");
+
+}
+
+ .form_form{
+  animation: bgchange 10s ease infinite;
+}
+
+@keyframes bgchange{
+      0%   {background:rgba(4, 116, 25, 0.5);}
+      25%  {background:rgba(10, 94, 26, 0.7);};
+      50%  {background:rgba(1, 26, 6, 0.9);}
+      70%  {background: rgba(red, green, blue, alpha);}
+      85%  {background:rgb(200 104 54);} 
+      100% {background:pink;}
+ }
+
+.form_form h3 {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    font-size: 5vw;
+    display: block;
+    top: 10%;
+    left: 0%;
+    transform: rotate(-50%, -50%);
+    /* transform-origin: left top; */
+
+}
+
+.form_button {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 35%;
+    transform: rotate(-50%, -50%);
+    transform-origin:left top;
+    text-decoration: none;
+    width: 30vw;
+    height: 15vw;
+    background-color: snow;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form_button span {
+}
+
+
+
+
+
+
+
 
 
 
@@ -1085,18 +1159,17 @@ position: absolute;
 padding: 3vw;
   width: 40%;
   background-color: rgba(24, 182, 77, 0.6);
-  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", serif;
+font-family: 'Noto Sans JP', sans-serif;
 }
 
 .text_container.center_text {
 left:50%;
-top: 45%;
+top: 35%;
   transform: translate(-50%, -50%);
 }
 
 .center_text p span{
-
-    font-weight: bold;
+    font-weight: 900;
     background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
 
 }
@@ -1156,6 +1229,13 @@ left:0;
   font-size: 2vw;
   line-height: 1.8;
 }
+
+.text_container.center_text {
+left:50%;
+top: 36%;
+  transform: translate(-50%, -50%);
+}
+
 }
 
 @media screen and (max-width:800px) {
@@ -1179,9 +1259,7 @@ left:0;
 }
 
 .text_container.center_text {
-left:50%;
-top: 47%;
-  transform: translate(-50%, -50%);
+    top: 36%;
 }
 
 }
@@ -1193,8 +1271,7 @@ top: 47%;
 }
 
 .text_container.center_text {
-left:50%;
-top:49%;
+top:36%;
   transform: translate(-50%, -50%);
 }
 
@@ -1204,7 +1281,7 @@ top:49%;
 
 .text_container.center_text {
 left:50%;
-top:53%;
+top:41%;
   transform: translate(-50%, -50%);
 }
 
@@ -1218,7 +1295,7 @@ top:53%;
 
     .text_container.center_text {
 left:50%;
-top: 53%;
+top: 41%;
   transform: translate(-50%, -50%);
 }
 
@@ -1260,8 +1337,7 @@ top: 53%;
 .text_container.center_text {
 position: absolute;
 width: 95%;
-left:50%;
-top: 58%;
+top: 43%;
   transform: translate(-50%, -50%);
 }
 }
@@ -1270,7 +1346,7 @@ top: 58%;
 
 .text_container.center_text {
 left:50%;
-top:55%;
+top:46%;
   transform: translate(-50%, -50%);
 }
 
@@ -1280,7 +1356,7 @@ top:55%;
 
 .text_container.center_text {
 left:50%;
-top:61%;
+top:50%;
   transform: translate(-50%, -50%);
 }
 
@@ -1290,7 +1366,7 @@ top:61%;
 
 .text_container.center_text {
 left:50%;
-top:63%;
+top:53.5%;
   transform: translate(-50%, -50%);
 }
 
