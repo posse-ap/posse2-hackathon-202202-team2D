@@ -548,7 +548,7 @@ display: block;
 
 .footer {
   background-color: rgb(8, 165, 66);
-  height: 650px;
+  height: 400px;
   width: 100%;
 }
 
@@ -608,45 +608,47 @@ display: block;
   height: 100%;
 }
 
-/* snsで詳細を見るのテキスト */
+/* shareのテキスト */
 
 .footer_sns_text {
-  margin: 10px auto;
+  margin-top: 40px;
+  text-align: center;
   font-family: "TsukuARdGothic-Regular";
+  font-weight: bolder;
 }
 
 /* twitterのアイコン */
 
 .fa-twitter {
-  font-size: 40px;
+  font-size: 60px;
   color: rgb(65, 65, 65);
 }
 
 .fa-twitter:hover {
-  color: rgb(68, 161, 255);
+  color: white;
 }
 
 /* インスタのアイコン */
 
 .fa-instagram {
-  font-size: 40px;
+  font-size: 60px;
   color: rgb(65, 65, 65);
   margin-right: 7px;
 }
 
 .fa-instagram:hover {
-  color: rgb(228, 66, 29);
+  color: white;
 }
 
 /* Lineのアイコンの色指定 */
 
 .fa-line {
-  font-size: 40px;
+  font-size: 60px;
   color: rgb(65, 65, 65);
 }
 
 .fa-line:hover {
-  color: rgb(126, 183, 28);
+  color: white;
 }
 
 /* special thanksメッセージ */
@@ -660,41 +662,41 @@ display: block;
   font-family: 'Ubuntu Mono', monospace;
 }
 
-/* トップページに戻るボタン */
+.fotter_logo2 {
+  height: 110px;
+  width: auto;
+}
 
-.footer-top-page-button {
-  color: white;
-  background: rgb(74, 74, 74);
-  width: 300px;
+.posse2_logo {
+  text-align: center;
+}
+
+.posse2_logo_wrapper {
+  width: 100%;
   height: auto;
-  margin: 10px auto;
-  padding: 30px;
+  background-color: white;
 }
 
-.footer-top-page-button:hover {
-  color: rgb(74, 74, 74);
-  background: white;
-  transition: .8s;
+.fotter_menu_contents {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* トップページに戻るボタンのテキスト */
-
-.footer-top-page-button-text {
-  font-size: 25px;
-  font-weight: 400;
+.fotter_menu_contents:hover {
+	color: white;
 }
 
-/* 製作者の名前 */
-
-.footer-editors {
-  font-size: 12px;
-  line-height: 30px;
-  margin-top: 50px;
-  font-family: 'Ubuntu Mono', monospace;
+.fotter_menu {
+  display: inline-block;
+  padding: 10px 15px 0px;
 }
 
-/* footerのsns上の矢印 */
+.fotter_menu_container {
+  width: 100%;
+  height: auto;
+}
 
-.fa-arrow-circle-down {
-  color: rgb(74, 74, 74);
+.fotter_menu_wrapper {
+  text-align: center;
 }
