@@ -229,42 +229,49 @@ jQuery(function () {
 
 // Quote Generator
 
-var square =[
-  '../img/square0.jpg',
-  '../img/square1.jpg',
-  '../img/square2.jpg',
+const picture =[
+  '../img/timeline_img1.jpg',
+  '../img/timeline_img2.jpg',
+  '../img/timeline_img3.jpg',
+  '../img/timeline_img4.jpg',
+  '../img/timeline_img5.jpg',
 ]
 
-var oblong = [
-  '../img/oblong0.jpg',
-]
+const eventName = [
+  'eventName1',
+  'eventName2',
+  'eventName3',
+  'eventName4',
+  'eventName5',
+  'eventName6',
+] 
 
-var vertical =[
-  '../img/vertical0.jpg',
-  '../img/vertical1.jpg',
-  '../img/vertical2.jpg',
-]
-
-let quote = document.getElementById('quote');
+// let quote = document.getElementById('quote');
 // var r = Math.floor(Math.random()*(picture.length));
 
 
-quote.insertAdjacentHTML("beforeend",
-`<div class="quote_wrapper">`
-  + `<header>Photo gallery of POSSE②</header>`
-  + `<div class="content">`
-  + `<div class="img_area">`
-  + `<div class="square_img"><img src=${square[1]} alt=""></div>`
-  + `<div class="oblong_img"><img src=${oblong[0]} alt=""></div>`
-  + `<div class="vertical_img"><img src=${vertical[1]} alt=""></div>`
-  + `</div>`
-  + `</div>`
-  + `<div class="buttons">`
-  + `<div class="features">`
-  + `<button>New Photo</button>`
-  + `</div>`
-  + `</div>`
-);
+// quote.insertAdjacentHTML("beforeend",
+//   `<div class="wrapper">`
+//   + `<header>POSSE②の日常</header>`
+//   + `<div class="content">`
+//     + `<div class="img_area">`
+//       + `<div><img id="img" src=${picture[r]} alt=""></div>`
+//     + `</div>`
+//   + `</div>`
+//   + `<div class="event">`
+//     + `<span>__</span>`
+//     + `<span id="name">${eventName[r]}</span>`
+//   + `</div>`
+// + `</div>`
+//   + `<div class="buttons">`
+//     + `<div class="features">`
+//       + `<div>`
+//         + `<a href="">POSSE②の歴史って？</a>`
+//       + `</div>`
+//       + `<button id="button">New Photo</button>`
+//     + `</div>`
+//   + `</div>`
+// );
 
 let img = document.getElementById("img");
 let src = img.getAttribute("src");
