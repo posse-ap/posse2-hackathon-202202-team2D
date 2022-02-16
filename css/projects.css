@@ -1,5 +1,16 @@
 /* PCサイズ */
 
+.all_wrapper {
+font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.main_title {
+  margin: 4vw auto;
+  font-size: 3vw;
+  text-align: center;
+}
+
 .game_wrapper {
   width: 90%;
   margin-bottom: 10vw;
@@ -192,21 +203,67 @@ filter: blur(4px);
 
 /* スマホサイズ */
 @media screen and (max-width: 800px){
+
+  .fadein
+
   .tiles{
     margin: 20px;
   }
 
   .tile {
-    margin: 5vw;
+    margin: 10vw;
+  }
+
+.c-arrow-label__item {
+  font-size: 3vw;
+  margin-bottom: 2vw;
+  padding: 0 1vw;
+  border-left: 3px solid #ff9933;
+}
+
+/* .c-arrow-label__item:hover {
+  border-bottom:  solid #000;
+  transform: scale(1,0);
+} */
+
+
+
+  .img_text_unit {
+  display: flex;
+  width: 90%;
+  justify-content: center;
   }
 
   .tl_img{
+  width: 40%;
+  height: 50vw;
+  object-fit: cover;
+
     box-shadow: black 5px;
   }
   .details{
-    position: absolute;
-    top: 70%;
+  width: 45%;
+  padding-left: 4vw;
+  display: flex;
+  flex-direction: column;
+
   }
+
+  .details span {
+  line-height: 1.8;
+  letter-spacing: 1.5;
+  
+  }
+
+  .title {
+  font-weight: bold;
+  font-size: 3vw;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #ff9933;
+  margin-bottom: 10px;
+  }
+
+
 
 }
 
@@ -218,10 +275,23 @@ filter: blur(4px);
 
 
 /* ゲームーーーーーーーゲームーーーーーーーゲームーーーーーーーゲームーーーーーーーゲームーーーーーーーゲームーーーーーーー */
+.game_wrapper {
+width: 100%;
+margin: 15vw 0;
+height: 80vw;
+}
+
 
 .wrapper{
   width: 100%;
 }
+
+.sub_title {
+  margin: 4vw auto;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
 .ex{
   width: 100%;
   text-align: center;
