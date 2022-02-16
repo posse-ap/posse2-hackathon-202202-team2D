@@ -86,7 +86,7 @@ $(window).scroll(function (){
                 rightPressed = false;
             }
         }
-
+    
         // パソコン用キーボード操作
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
@@ -178,8 +178,7 @@ $(window).scroll(function (){
           if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
             dx = -dx;
           }
-          console.log('y値:' + y + dy);
-          if(y + dy < ballRadius) {
+                    if(y + dy < ballRadius) {
             dy = -dy;
           }
           else if(y + dy > canvas.height-ballRadius) {
@@ -205,7 +204,6 @@ $(window).scroll(function (){
           y += dy;
         }
 
-        console.log(canvas.height)
 
 //フェードイン
 $(function () {
