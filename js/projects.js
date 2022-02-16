@@ -288,3 +288,10 @@ $(function () {
       });
   });
 }); 
+
+$('.tile').mouseover(function() {
+
+    $('.tl_img').toggleClass("opacity_yes");
+
+    // ここにマウスオーバー時の処理を記述する
+ })

@@ -6,13 +6,28 @@
     width: 80%;
     text-align: center;
 }
+
+.interview_title span{
+    background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
+}
+
+.a span {
+    background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
+
+}
+
 .q{
     width: 60%;
     height: 60%;
     margin-left: 6vw;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-bottom: 5vw;
+    margin-top: 3vw;
 }
+
+.q p {
+    font-size: 1.5vw;
+}
+
 .who_q{
     font-size: 1rem;
     color: gray;
@@ -44,7 +59,11 @@
     width: 60%;
     height: 60%;
     margin-left: 20vw;
-    margin-bottom: 4rem;
+    margin-bottom: 5vw;
+}
+
+.a p{
+    font-size: 1.8vw;
 }
 .who_a{
     font-size: 1rem;
@@ -83,9 +102,94 @@
 
 @media screen and (max-width:800px) {
     .img{
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         /* min-width: 100px; */
         border-radius: 50%;
     }
+}
+
+@media screen and (max-width:800px) {
+
+.interview_wrapper {
+    width: 90%;
+}
+
+.q {
+    margin-left: 5vw;
+    width: 70%;
+}
+
+.q p{
+    font-size: 2vw;
+    }
+
+.a {
+    margin-left: 30vw;
+    width: 80%;
+}
+
+.a p{
+font-size: 2.5vw;
+}
+
+}
+
+
+@media screen and (max-width:700px) {
+
+.interview_wrapper {
+    width: 90%;
+}
+
+.interview_title{
+    font-size: 4vw;
+}
+
+.q {
+    margin-left: 5vw;
+    width: 90%;
+}
+
+.q p{
+    font-size: 16px;
+    }
+
+.a {
+    margin-left: 20vw;
+    width: 90%;
+}
+
+.a p{
+font-size: 20px;
+}
+
+
+}
+
+@media screen and (max-width:600px) {
+
+.interview_wrapper {
+    width: 90%;
+}
+
+.q {
+    margin-left: 5vw;
+    width: 90%;
+}
+
+.q p{
+    font-size: 16px;
+    }
+
+.a {
+    margin-left: 20vw;
+    width: 90%;
+}
+
+.a p{
+font-size: 17px;
+}
+
+
 }
