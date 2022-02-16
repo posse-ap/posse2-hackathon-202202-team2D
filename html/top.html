@@ -144,17 +144,27 @@
                 <a href="https://docs.google.com/forms/d/1iFjwRYh-WxPEn92TfUJ7ddOcWRiMJ_Uo8Xu68L904ZM/viewform?edit_requested=true"
                     class="form_button">
                     <span>POSSE②<br>申し込みフォーム</span></a>
+                <!-- カウントダウンタイマー -->
+                <div class="cdt_wrapper">
+                    <div class="cdt">
+                        <!-- 何に関するカウントダウンなのか -->
+                        <span class="cdt_txt" id="cdt_txt"></span>
+                        <!-- カウントダウン -->
+                        <span class="cdt_date" id="cdt_date"></span>
+                    </div>
+                </div>
+                    
             </div>
         </div>
     </div>
 
     <div class="page_change_wrapper">
         <div class="page_change_title">
-            <h1>POSSE②をもっと知りたい方</h1>
+            <p class="more">POSSE②をもっと知りたい方</p>
         </div>
         <div class="page_change">
-            <div class="page_change_button"><a href="../html/timeline.html">POSSE②の活動記録</a></div>
-            <div class="page_change_button"><a href="./INTERVIEW.html">POSSE②メンバーへのインタビュー</a></div>
+            <button id="timelineButton" class="page_change_button"><a href="../html/timeline.html">活動記録→</a></button>
+            <button id="interviewButton"class="page_change_button"><a href="./speech.html">インタビュー→</a></button>
         </div>
     </div>
 
