@@ -503,12 +503,12 @@ body {
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
 
 .passing.move .passing_bar:before {
-	-webkit-animation: passing_bar 1.2s ease 0.5s 1.5 normal forwards;
-	animation: passing_bar 1.2s ease 0.5s 1.5 normal forwards;
+	-webkit-animation: passing_bar 1.5s ease 2s 1.5 normal forwards;
+	animation: passing_bar 1.5s ease 2s 1.5 normal forwards;
 }
 .passing.move .passing_txt {
-	-webkit-animation: passing_txt 1s ease 0.3s 1 normal forwards;
-	animation:passing_txt 1s ease 0.3s 1 normal forwards;  
+	-webkit-animation: passing_txt 1.5s ease 0.3s 1 normal forwards;
+	animation:passing_txt 1.5s ease 2s 1 normal forwards;  
 }
 
 
@@ -561,7 +561,7 @@ body {
   width: 15vw;
   height: 15vw;
       top: 6%;
-    right: 15%;
+    right: 3%;
     /* border-radius: 50%; */
 }
 
@@ -588,22 +588,18 @@ body {
 
 .change-img2 img {
     position: absolute;
-
-    /* transform: rotate(-30deg); */
     object-fit: cover;
     top: 0%;
     left: 0%;
-    /* transform: rotate(-50%, -50%); */
 }
 
-/* About画像切り替え */
 .change-img3 {
   overflow: hidden;
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 26%;
-    right: 17%;
+      top: 24%;
+    right: 3%;
     /* border-radius: 50%; */
 }
 
@@ -842,19 +838,17 @@ width: 75vw;
 .form_form {
 
     width: 100vw;
-height: 40vw;
+height: 35vw;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  /* justify-content: space-between; */
+  /* justify-content: center; */
+  justify-content: end;
   /* padding: 10vw 5vw 3vw; */
   padding-bottom: 4vw;
   margin: 10vw auto 20vw;
       /* background-color: green; */
-
   position: relative;
-
-background-image: linear-gradient(rgba(16, 225, 55, 0.5), rgba(8, 255, 55, 0.5)),
+background-image: 
                   url("../img/nature.jpg");
 
 }
@@ -874,11 +868,13 @@ background-image: linear-gradient(rgba(16, 225, 55, 0.5), rgba(8, 255, 55, 0.5))
 
 .form_form h3 {
     position: absolute;
+    color: snow;
+    font-weight: italic;
     width: 100vw;
     text-align: center;
     font-size: 5vw;
     display: block;
-    top: 12%;
+    top: 20%;
     left: 0%;
     transform: rotate(-50%, -50%);
 font-family: 'Noto Sans JP', sans-serif;
@@ -887,7 +883,7 @@ font-family: 'Noto Sans JP', sans-serif;
 }
 
 .form_button {
-
+/* 
     position: absolute;
     display: flex;
     justify-content: center;
@@ -899,19 +895,60 @@ font-family: 'Noto Sans JP', sans-serif;
     text-decoration: none;
     width: 30vw;
     height: 13vw;
-    background-color: snow;
-    text-align: center;
+    /* background-color: snow; */
+    /* text-align: center;
     margin: 0 auto;
-    box-shadow: 3px 3px 3px #ff9933;
+    box-shadow: 3px 3px 3px #ff9933; */
 }
 
 .form_button span {
     font-family: "Sawarabi Gothic";
     
-
 }
 
+.form_button {
+  width: 30vw;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  bottom: 20%;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
 
+.form_button {
+  color: #fff;
+  background-color: #eb6100;
+}
+.form_button {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+}
+.form_button:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}
+.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
 
 
 /* フッターの指定 */
@@ -1125,8 +1162,19 @@ height: 55vw;
   justify-content: space-between;
   /* padding: 10vw 5vw 3vw; */
   padding-bottom: 4vw;
-  margin: 10vw 0 20vw;
 }
+
+.margin_normal {
+  margin: 25vw 0 20vw;
+  
+}
+
+.margin_short {
+  margin: 10vw 0;
+  
+}
+
+
 
 /* 画像のdiv */
 .img_container {    
@@ -1141,7 +1189,10 @@ height: 55vw;
   height: 55vw;
   object-fit: cover; 
   position: absolute;
+  filter: blur(4px);
 }
+
+
 
 /* About画像切り替え */
 /* .change-img1 {
