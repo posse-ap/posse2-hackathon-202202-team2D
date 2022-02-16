@@ -845,12 +845,12 @@ height: 35vw;
   /* justify-content: center; */
   justify-content: end;
   /* padding: 10vw 5vw 3vw; */
-  padding-bottom: 4vw;
+  padding-bottom: 2em;
   margin: 10vw auto 20vw;
       /* background-color: green; */
   position: relative;
-background-image: 
-                  url("../img/nature.jpg");
+background-image: url("../img/nature.jpg");
+background-size: ;
 
 }
 
@@ -877,14 +877,13 @@ background-image:
     display: block;
     top: 20%;
     left: 0%;
-    transform: rotate(-50%, -50%);
+    /* transform: rotate(-50%, -50%); */
 font-family: 'Noto Sans JP', sans-serif;
     /* transform-origin: left top; */
 
 }
 _::-webkit-full-page-media,_:future,:root .form_form h3 {
-  position: absolute;
-  top: 100%;
+  top: 20%;
 }
 .form_button {
 /* 
@@ -911,14 +910,14 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
 }
 
 .form_button {
-  width: 30vw;
+  width: 30%; 
   margin: 0 auto;
   font-weight: 700;
   line-height: 1.5;
   position: relative;
   bottom: 20%;
   display: inline-block;
-  padding: 1rem 4rem;
+  padding: 1em 4em;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -933,7 +932,12 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
   color: #212529;
   border-radius: 0.5rem;
 }
-
+@media screen and (max-width: 768px) {
+  .form_button {
+    width: 45%;
+    padding:1em;
+  }
+}
 .form_button {
   color: #fff;
   background-color: #eb6100;
@@ -952,6 +956,9 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
 .btn--shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+_::-webkit-full-page-media,_:future,:root .form_button{
+  top: 70%;
 }
 
 
@@ -989,8 +996,12 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
   line-height: 1;
 }
 .cdt_num {
-  font-size: 3rem;
+  font-size: 2em;
   padding: 0 .15em;
+}
+_::-webkit-full-page-media,_:future,:root .cdt_wrapper{
+  margin-top: 10em;
+  
 }
 @media screen and (min-width: 768px) {
     /* html {
@@ -1002,17 +1013,22 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
 } */
 .cdt_wrapper {
   line-height: 2.5;
-  font-size: 1.8em;
-  padding: 0 .5em;
+  font-size: 1em;
+  padding: 1em .5em;
 }
 .cdt_txt {
-  font-size: 1rem;
+  font-size: .5em;
 }
 .cdt_num {
   line-height: 1;
   padding: .1em .05em;
 }
+_::-webkit-full-page-media,_:future,:root .cdt_wrapper{
+  margin-top: 15em;
+  
 }
+}
+
 
 
 /* フッターの指定 */
