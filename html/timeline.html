@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,24 +16,23 @@
 </head>
 
 <body>
-
     <header id="header" class="wrapper">
         <h1 class="site_title">
             <a href="../html/top.html"><img src="../img/9.png" alt="POSSE②ロゴ"></a>
         </h1>
-
         <div class="right_header">
             <!-- <button class="entry_button">ENTRY</button> -->
-            <a class="entry_button text_random_anime"
+            <a class="entry_button text_random_anime" id="entryButton"
                 href="https://docs.google.com/forms/d/1iFjwRYh-WxPEn92TfUJ7ddOcWRiMJ_Uo8Xu68L904ZM/viewform?edit_requested=true"
                 target="blank">
-                <span>FORM入力</span></a>
+                <span>加入する</span>
+            </a>
             <nav id="navi">
                 <ul class="nav_menu">
+                    <li class="under_line"><a class="text_random_anime" href="../html/top.html">TOP</a></li>
                     <li class="under_line"><a class="text_random_anime" href="../html/timeline.html">TIMELINE</a></li>
                     <li class="under_line"><a class="text_random_anime" href="../html/projects.html">PRODUCTS</a></li>
-                    <li class="under_line"><a class="text_random_anime" href="../html/speech.html">SPEECH</a></li>
-                    <!-- <li><a href="mailto:xxxxx@xxx.xxx.com?subject=お問い合わせ">CONTACT</a></li> -->
+                    <li class="under_line"><a class="text_random_anime" href="../html/speech.html">INTERVIEW</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,7 +52,7 @@
             <div class="passing move">
                 <div class="passing_box">
                     <div class="passing_bar">
-                        <div class="passing_txt right_to_left">The history of POSSE②</div>
+                        <div class="passing_txt right_to_left">The history of<br> POSSE②</div>
                     </div>
                 </div>
             </div>
@@ -65,78 +65,85 @@
             <img src="../img/tech-photo2.jpg" alt="">
             <img src="../img/tech-photo3.jpg" alt="">
         </div> -->
-    <dl>
-        <dt>2021</dt>
-        <dd>
-            <ol>
-                <li class="event1">
-                    <dl>
-                        <dt>10.31</dt>
-                        <dd>
-                            <dl>
-                                <dt>POSSE②顔合わせ</dt>
-                                <dd>立ち上げメンバーとなった2.0期生が初めて集合! <br> 既に仲が良かった人もいれば、それまで全く話したことのなかった人もいたとか、、、？！</dd>
-                                <dd><img src="../img/timeline_img1.jpg" alt=""></dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="event2">
-                    <dl>
-                        <dt>11.6</dt>
-                        <dd>
-                            <dl>
-                                <dt>2.5期生入学式</dt>
-                                <dd>2.5期生が入学し、ついにPOSSE②が始動! <br> この日が正式にPOSSE②が発足した日です！ <br>2.5期生の入学を前に、立ち上げメンバーの2.0期生は何度も話し合いを重ねて万全の状態ではじめての後輩を迎え入れました！</dd>
-                                <dd><img src="../img/timeline_img2.jpg" alt=""></dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="event3">
-                    <dl>
-                        <dt>12.18~12.19</dt>
-                        <dd>
-                            <dl>
-                                <dt>新人ハッカソン</dt>
-                                <dd>2.5期生だけで行うハッカソン。2.0期は自分のチームの後輩が優勝できるように全力でサポートします。2.5期生にとって、彼らの人生初のハッカソンは貴重な経験になったはずです。</dd>
-                                <dd><img src="../img/timeline_img3.jpg" alt=""></dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                </li>
-            </ol>
-        </dd>
-        <dt>2022</dt>
-        <dd>
-            <ol>
-                <li class="event4">
-                    <dl>
-                        <dt>2.14~2.19</dt>
-                        <dd>
-                            <dl>
-                                <dt>第一回ハッカソンフェス</dt>
-                                <dd>初めて2.0期、2.5期合同チームで戦いました！二泊三日という長丁場であるからこそ、プログラミングの力だけではなく様々な知識や経験が得られます。</dd>
-                                <dd><img src="../img/timeline_img4.jpg" alt=""></dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="event5">
-                    <dl>
-                        <dt>Coming Soon!!</dt>
-                        <dd>
-                            <dl>
-                                <dt>Next Event...</dt>
-                                <dd></dd>
-                                <dd><img class="img5" src="../img/timeline_img5.jpg" alt=""></dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                </li>
-            </ol>
-        </dd>
-    </dl>
+        <dl>
+            <dt>2021</dt>
+            <dd>
+                <ol>
+                    <li class="event1">
+                        <dl>
+                            <dt>10.31</dt>
+                            <dd>
+                                <dl>
+                                    <dt>POSSE②顔合わせ</dt>
+                                    <dd>立ち上げメンバーの2.0期生で初めて集合!</dd>
+                                    <dd><img src="../img/timeline_img1.jpg" alt=""></dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="event2">
+                        <dl>
+                            <dt>11.6</dt>
+                            <dd>
+                                <dl>
+                                    <dt>2.5期生入学式</dt>
+                                    <dd>2.5期生が入学し、ついにPOSSE②が始動!</dd>
+                                    <dd><img src="../img/timeline_img2.jpg" alt=""></dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="event3">
+                        <dl>
+                            <dt>12.18~12.19</dt>
+                            <dd>
+                                <dl>
+                                    <dt>新人ハッカソン</dt>
+                                    <dd>2.5期生による初めてのハッカソン</dd>
+                                    <dd><img src="../img/timeline_img3.jpg" alt=""></dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                </ol>
+            </dd>
+            <dt>2022</dt>
+            <dd>
+                <ol>
+                    <li class="event4">
+                        <dl>
+                            <dt>2.14~2.19</dt>
+                            <dd>
+                                <dl>
+                                    <dt>第一回ハッカソンフェス</dt>
+                                    <dd>初めて2.0期、2.5期合同チームで戦いました！</dd>
+                                    <dd><img src="../img/timeline_img4.jpg" alt=""></dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="event5">
+                        <dl>
+                            <dt>Coming Soon!!</dt>
+                            <dd>
+                                <dl>
+                                    <dt>Next Event...</dt>
+                                    <dd></dd>
+                                    <dd><img class="img5" src="../img/timeline_img5.jpg" alt=""></dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
+                </ol>
+            </dd>
+        </dl>
+        <div class="form_form">
+            <h3 class="form_quote">POSSE②の未来を共に創ろう。</h3>
+            <p>POSSE②加入にはフォームの記入が必要です</p>
+            <a href="https://docs.google.com/forms/d/1iFjwRYh-WxPEn92TfUJ7ddOcWRiMJ_Uo8Xu68L904ZM/viewform?edit_requested=true"
+                class="form_button">
+                <span>POSSE②<br>申し込みフォーム</span></a>
+        </div>
 
     </div>
 
@@ -155,9 +162,12 @@
             <div class="fotter_menu_container">
                 <p class="footer_sns_text">~VIEW MORE~</p>
                 <ul class="fotter_menu_wrapper">
-                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/timeline.html">TIMELINE</a></li>
-                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/projects.html">PRODUCTS</a></li>
-                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/speech.html">SPEECH</a></li>
+                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/timeline.html">TIMELINE</a>
+                    </li>
+                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/PRODUCTS.html">PRODUCTS</a>
+                    </li>
+                    <li class="fotter_menu"><a class="fotter_menu_contents" href="../html/INTERVIEW.html">INTERVIEW</a>
+                    </li>
                 </ul>
             </div>
 
@@ -191,10 +201,10 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="../js/top.js"></script>
-<script src="../js/timeline.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/top.js"></script>
+    <script src="../js/timeline.js"></script>
 </body>
 
 </html>
