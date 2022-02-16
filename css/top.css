@@ -70,8 +70,10 @@ body {
   overflow: hidden;
 }
 
-.green2 {
-    color:#03471c !important;
+.site_title {
+
+
+    /* left: 20px; */
 }
 
 .site_title img {
@@ -475,14 +477,13 @@ body {
 	z-index: 1;
 	/* 任意の値 */
 	background: #3c8d5b;
-    opacity: 0.4;
+    opacity: 0.2;
 }
 .passing .passing_txt {
     height: 100%;
     width: 100%;
 	opacity: 0;
     text-align: center;
-    color:rgb(7, 162, 7);
       /* -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl; */
   font-family: "Sawarabi Mincho"; 
@@ -496,6 +497,7 @@ body {
 	font-size: 6.5vw;
 	font-weight: bold;
 	line-height: 1.5;
+    color: white;
 }
 
 /* 動作にかかる秒数　動作が始まるまでの秒数　*/
@@ -560,7 +562,7 @@ body {
   width: 15vw;
   height: 15vw;
       top: 6%;
-    left: 3%;
+    right: 3%;
     /* border-radius: 50%; */
 }
 
@@ -580,8 +582,8 @@ body {
   position: absolute;
   width: 15vw;
   height: 15vw;
-      top: 20%;
-    right: 12%;
+      top: 18%;
+    left: 2%;
     /* border-radius: 50%; */
 }
 
@@ -592,6 +594,25 @@ body {
     left: 0%;
 }
 
+.change-img3 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 24%;
+    right: 3%;
+    /* border-radius: 50%; */
+}
+
+.change-img3 img {
+    position: absolute;
+
+    /* transform: rotate(-30deg); */
+    object-fit: cover;
+    top: 0%;
+    left: 0%;
+    /* transform: rotate(-50%, -50%); */
+}
 
 @media screen and (max-width:640px) {
 
@@ -602,7 +623,7 @@ body {
   width: 15vw;
   height: 15vw;
       top: 6.5%;
-    left: 3%;
+    right: 3%;
     /* border-radius: 50%; */
 }
 
@@ -613,25 +634,22 @@ body {
   width: 15vw;
   height: 15vw;
       top: 27%;
-    right: 12%;
+    right: 3%;
+    /* border-radius: 50%; */
+}
+
+/* About画像切り替え */
+.change-img3 {
+  overflow: hidden;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+      top: 33%;
+    right: 3%;
     /* border-radius: 50%; */
 }
 
 }
-
-@media screen and (max-width:600px) {
-    .change-img1 {
-        display: none;
-    
-    }
-    .change-img2 {
-        display: none;
-    
-    }
-
-}
-
-
 
 
 
@@ -869,36 +887,26 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
 }
 .form_button {
 /* 
-    transform: rotate(-50%, -50%);
-  font-family: "Sawarabi Mincho"; 
-/* transform-origin: left top; */
-
-}
-
-.form_form p {
-    text-align: center;
-    font-size: 1.3vw;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 50%;
-    left: 33%;
-    color: white;
-}
-
-.form_form p:before {
-  margin-right: 1rem;
-
-  content: '＼';
-}
-
-.form_form p:after {
-  margin-left: 1rem;
-
-  content: '／';
+    left: 35%;
+    transform: rotate(-50%, -50%);
+    transform-origin:left top;
+    text-decoration: none;
+    width: 30vw;
+    height: 13vw;
+    /* background-color: snow; */
+    /* text-align: center;
+    margin: 0 auto;
+    box-shadow: 3px 3px 3px #ff9933; */
 }
 
 .form_button span {
     font-family: "Sawarabi Gothic";
-    font-size: 2.5vw;
+    
 }
 
 .form_button {
@@ -907,7 +915,7 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
   font-weight: 700;
   line-height: 1.5;
   position: relative;
-  bottom: 5%;
+  bottom: 20%;
   display: inline-block;
   padding: 1em 4em;
   cursor: pointer;
@@ -921,6 +929,7 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
   vertical-align: middle;
   text-decoration: none;
   letter-spacing: 0.1em;
+  color: #212529;
   border-radius: 0.5rem;
 }
 @media screen and (max-width: 768px) {
@@ -938,8 +947,6 @@ _::-webkit-full-page-media,_:future,:root .form_form h3 {
   background-color: #eb6100;
   border-bottom: 5px solid #b84c00;
 }
-
-
 .form_button:hover {
   margin-top: 3px;
   color: #fff;
@@ -991,10 +998,6 @@ _::-webkit-full-page-media,_:future,:root .form_button{
 .cdt_num {
   font-size: 2em;
   padding: 0 .15em;
-}
-_::-webkit-full-page-media,_:future,:root .cdt_wrapper{
-  margin-top: 10em;
-  
 }
 @media screen and (min-width: 768px) {
     /* html {
@@ -1494,7 +1497,7 @@ top: 47%;
 
 .text_container.center_text {
 left:50%;
-top:45%;
+top:49%;
   transform: translate(-50%, -50%);
 }
 
@@ -1504,7 +1507,7 @@ top:45%;
 
 .text_container.center_text {
 left:50%;
-top:47%;
+top:53%;
   transform: translate(-50%, -50%);
 }
 
@@ -1518,7 +1521,7 @@ top:47%;
 
     .text_container.center_text {
 left:50%;
-top: 43%;
+top: 53%;
   transform: translate(-50%, -50%);
 }
 
@@ -1561,7 +1564,7 @@ top: 43%;
 position: absolute;
 width: 95%;
 left:50%;
-top: 50%;
+top: 58%;
   transform: translate(-50%, -50%);
 }
 }
