@@ -1,0 +1,251 @@
+.timeline {
+    background: linear-gradient(#fff,60%, #9bc7ab);
+    width: 100%;
+    position: relative;
+}
+
+.timeline>dl {
+    margin: 1em auto;
+    padding: 1em;
+    width: 80%;
+    background-size: 8px 8px;
+    /* box-shadow: 0 0 8px #fff; */
+}
+
+.timeline>dl>dt {
+    margin: 0 43%;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    background: #f93;
+    color: #fff;
+    /* border: 1px solid #333; */
+    /* border-top: 2px solid #333; */
+    /* border-bottom: 2px solid #333; */
+
+}
+
+.timeline>dl>dt::after {
+    content: "";
+    width: 2px;
+    height: 50px;
+    background: rgb(20, 165, 66);
+    ;
+    ;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.timeline>dl>dd {
+    padding: 48px 0 0;
+}
+
+.timeline>dl>dd ol {
+    list-style: none;
+    position: relative;
+}
+
+.timeline>dl>dd ol li {
+    width: 50%;
+    position: relative;
+    left: 50%;
+}
+
+.timeline>dl>dd ol li::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(20, 165, 66);
+}
+
+.timeline>dl>dd ol li>dl>dt {
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Lato';
+    font-style: italic;
+    line-height: 44px;
+    position: absolute;
+    right: calc(100% + .6em);
+}
+
+.timeline>dl>dd ol li>dl>dd dt {
+    margin: 0 0 1em 20px;
+    padding: 0.4em 0.6em;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    background: white;
+    color: black;
+    /* border: 1px solid #333; */
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.timeline>dl>dd ol li>dl>dd dt::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    position: absolute;
+    top: 20px;
+    right: 100%;
+    background: #333;
+}
+
+.timeline>dl>dd ol li>dl>dd dt::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 13px;
+    left: -28px;
+    border: 1px solid #333;
+    background: black;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline>dl>dd ol li>dl>dd dd {
+    padding: 0 0 2em 20px;
+}
+
+.timeline>dl>dd ol li:nth-child(2n) {
+    left: 0;
+}
+
+.timeline>dl>dd ol li:nth-child(2n)::before {
+    left: 100%;
+}
+
+.timeline>dl>dd ol li:nth-child(2n)>dl>dt {
+    right: auto;
+    left: calc(100% + .6em);
+}
+
+.timeline>dl>dd ol li:nth-child(2n)>dl>dd dt {
+    margin: 0 20px 1em 0;
+    text-align: right;
+}
+
+.timeline>dl>dd ol li:nth-child(2n)>dl>dd dt::before {
+    right: auto;
+    left: calc(100% + 1px);
+}
+
+.timeline>dl>dd ol li:nth-child(2n)>dl>dd dt::after {
+    left: auto;
+    right: -29px;
+}
+
+.timeline>dl>dd ol li:nth-child(2n)>dl>dd dd {
+    padding: 0 20px 2em 0;
+    text-align: left;
+}
+
+/* 
+.timeline>dl>dd ol li:last-child::before {
+    height: 22px;
+} */
+
+@media screen and (max-width: 640px) {
+    .timeline {
+        font-size: 12px;
+    }
+
+    .timeline>dl {
+        padding: 1em;
+        width: 90%;
+    }
+
+    .timeline>dl>dt {
+        margin: 0;
+        padding: 0.5em 0;
+        font-size: 15px;
+    }
+
+    .timeline>dl>dt::after {
+        content: "";
+        height: 26px;
+        left: 59px;
+    }
+
+    .timeline>dl>dd {
+        padding: 24px 0 0;
+    }
+
+    .timeline>dl>dd ol li {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+
+    .timeline>dl>dd ol li::before {
+        content: "";
+    }
+
+    .timeline>dl>dd ol li>dl>dt {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .timeline>dl>dd ol li>dl>dd dt {
+        padding: 0.6em;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.333;
+    }
+
+    .timeline>dl>dd ol li>dl>dd dt::before {
+        top: 15px;
+    }
+
+    .timeline>dl>dd ol li>dl>dd dt::after {
+        content: "";
+        width: 9px;
+        height: 9px;
+        top: 10px;
+        left: -26px;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n) {
+        left: 60px;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n)::before {
+        left: 0;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n)>dl>dt {
+        right: calc(100% + .6em);
+        left: auto;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n)>dl>dd dt {
+        margin: 0 0 1em 20px;
+        text-align: left;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n)>dl>dd dt::before {
+        right: calc(100% + 1px);
+        left: auto;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n)>dl>dd dt::after {
+        left: -26px;
+        right: auto;
+    }
+
+    .timeline>dl>dd ol li:nth-child(2n)>dl>dd dd {
+        padding: 0 0 2em 20px;
+        text-align: left;
+    }
+}
+
+.img5 {
+    opacity: 0.2;
+    filter: blur(5px);
+}

@@ -1,0 +1,195 @@
+
+
+.interview_title{
+    font-size: 3vw;
+    margin: 3em;
+    width: 80%;
+    text-align: center;
+}
+
+.interview_title span{
+    background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
+}
+
+.a span {
+    background:rgba(0, 0, 0, 0.0) linear-gradient(transparent 60%, rgba(255,153,51,0.8) 0%) ;
+
+}
+
+.q{
+    width: 60%;
+    height: 60%;
+    margin-left: 6vw;
+    margin-bottom: 5vw;
+    margin-top: 3vw;
+}
+
+.q p {
+    font-size: 1.5vw;
+}
+
+.who_q{
+    font-size: 1rem;
+    color: gray;
+    margin-left: 1.5rem;
+}
+.img_wrapper_q{
+    /* width: 100px; */
+    /* height: 100px; */
+    display: flex;
+
+}
+.img{
+    width: 97px;
+    height: 97px;
+    /* min-width: 100px; */
+    border-radius: 50%;
+    margin: 20px;
+    
+}
+.questioner{
+    border: 3px solid gray;
+}
+.question{
+    margin-top: 3rem;
+    width:100vw;
+}
+
+.a{
+    width: 60%;
+    height: 60%;
+    margin-left: 20vw;
+    margin-bottom: 5vw;
+}
+
+.a p{
+    font-size: 1.8vw;
+}
+.who_a{
+    font-size: 1rem;
+    text-align: right;
+    margin-right: 1.5rem;
+}
+.who_a_1{
+    color: red;
+}
+.who_a_2{
+    color: green;
+}
+.who_a_3{
+    color: blue;
+}
+
+.img_wrapper_a{
+    display: flex;
+}
+
+.answer{
+    margin-top: 2rem;
+    width:100vw;
+    text-align:  right;
+}
+.answerer_1{
+    border: 3px solid red;
+}
+.answerer_2{
+    border: 3px solid green;
+}
+.answerer_3{
+    border: 3px solid blue;
+}
+
+
+@media screen and (max-width:800px) {
+    .img{
+        width: 70px;
+        height: 70px;
+        /* min-width: 100px; */
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+.interview_wrapper {
+    width: 90%;
+}
+
+.q {
+    margin-left: 5vw;
+    width: 70%;
+}
+
+.q p{
+    font-size: 2vw;
+    }
+
+.a {
+    margin-left: 30vw;
+    width: 80%;
+}
+
+.a p{
+font-size: 2.5vw;
+}
+
+}
+
+
+@media screen and (max-width:700px) {
+
+.interview_wrapper {
+    width: 90%;
+}
+
+.interview_title{
+    font-size: 4vw;
+}
+
+.q {
+    margin-left: 5vw;
+    width: 90%;
+}
+
+.q p{
+    font-size: 16px;
+    }
+
+.a {
+    margin-left: 20vw;
+    width: 90%;
+}
+
+.a p{
+font-size: 20px;
+}
+
+
+}
+
+@media screen and (max-width:600px) {
+
+.interview_wrapper {
+    width: 90%;
+}
+
+.q {
+    margin-left: 5vw;
+    width: 90%;
+}
+
+.q p{
+    font-size: 16px;
+    }
+
+.a {
+    margin-left: 20vw;
+    width: 90%;
+}
+
+.a p{
+font-size: 17px;
+}
+
+
+}
